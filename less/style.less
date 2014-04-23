@@ -1684,6 +1684,13 @@ html[xmlns] .clearfix {
     }
 }
 @media screen and (max-width: 1000px) {
+    .wrap.clr li{
+        
+    }
+    .partners-section .clients-say .item {
+        width:100% !important;
+    }
+    
 	#snow{
 		display:none;
 	}
@@ -2070,6 +2077,7 @@ background-image: url("http://localhost:3000/less/../i/desktop/v-line.png");
         width:1920px;
         transition: 0.3s;
         li{
+            background-color:white;
             float:left;
             list-style:none;
         } 
@@ -2150,7 +2158,7 @@ background-image: url("http://localhost:3000/less/../i/desktop/v-line.png");
                 font-weight:normal;
             }
             .inner{
-                height:126px;
+                min-height:132px;
                 margin-left: 22px;
                 margin-right: 22px;
                 padding:10px;
@@ -2242,7 +2250,7 @@ background-image: url("http://localhost:3000/less/../i/desktop/v-line.png");
                     width:100%;
                     padding:0 10px;
                     font-size:17px;
-                    color: #4B4B4B;
+                    color: black;
                     padding:0;
                     margin:0;
                     padding-left:5px;
@@ -3185,6 +3193,9 @@ position:relative;
     }
 }
 @media screen and (max-width: 670px) {
+    .partners-section{
+        padding:0;
+    }
 	#header-section{
 		display:none !important;
 	}
