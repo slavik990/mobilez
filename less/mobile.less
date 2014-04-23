@@ -1,0 +1,48 @@
+@imagesfolder: '../i/desktop';
+body {
+    width:100%;
+	padding:0;
+	margin:0;
+}
+
+.main-menu-container{
+	@height: 154px;
+	@width: 165px;
+	position:absolute;
+	background-image: url("@{imagesfolder}/xmastree.jpg");
+    background:red;
+	width:100%;
+	height:100%;
+	.main-menu{
+		.logo-text{
+			width: @width*3;
+			height: @height;
+			h1 {
+				font-size: 44px;
+				font-weight: 300;
+				color: #FFF;
+				padding-top: 0px;
+				font-family: 'bebasneueregular';
+			}
+			h3{
+				font-size: 27px;
+				font-weight: 300;
+				color: #FFF;
+				padding-top: 10px;
+				font-family: 'robotothin';
+			}
+		}
+		.menu-link{
+
+		}
+		.menu-img{
+			
+		}
+	}
+}
+
+
+.clearfix {
+clear:both;
+}
+
