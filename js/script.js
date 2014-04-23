@@ -1,10 +1,30 @@
 $(document).ready(function(){
 
     $(".form .button-submit").click(function(){
-        $.post("mail.php", $("#contact-form").serialize(),  function(data) {   });
-        $('#success').html('The Message sent!');
-        $('#success').hide(2000);
-        return false;
+
+        var email = $('#contact-form input[name="email"]').val();
+        var massage = $('#contact-form textarea[name="message"]').val();
+        var regEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+        if (!regEmail.test(email)|| massage == "") {
+            $('div.inTouch').find('ul.formErrors li').hide();
+            if(!regEmail.test(email)){
+               var emailError = $('div.inTouch').find('ul.formErrors li').eq(0);
+                  emailError.show();
+                  email.focus;
+            }
+            if (massage == ""){
+                var emailError = $('div.inTouch').find('ul.formErrors li').eq(1);
+                emailError.show();
+            }
+            return false;
+        }
+        else { $('div.inTouch').find('ul.formErrors li').hide();
+            $.post("mail.php", $("#contact-form").serialize(),  function(data) {   });
+            $('#success').html('The Message sent!');
+            $('#success').hide(2000);
+            return false;
+        }
     });
 
 
