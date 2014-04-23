@@ -332,13 +332,16 @@ $(document).ready(function(){
 
 	});
     $(".footer .list").click(function(){
-        $(this).find("ol").toggle();
+        $(".footer .list ol").hide();
+        $(this).find("ol").show();
         return false;
     });
     $(".footer .list ol li").click(function(){
         $(this).parents(".list").find(">span").text($(this).text());
         $(this).closest('ol').find('li[class="active"]').removeClass('active');
         $(this).addClass('active');
+        $(".footer .list ol").hide();
+        return false;
         
     });
 	$(".portfolio-grid .item").mouseenter(function(e){
@@ -381,6 +384,7 @@ $(document).ready(function(){
 		}
 	});
     $(".form .line input, .form .line .arrow").click(function(){
+    $(".form .line ul").hide();
         $(this).parent().find("ul").toggle();
         return false;
     });
@@ -389,7 +393,8 @@ $(document).ready(function(){
         $(".footer .list ol").hide();
     });
    $(".form .line ul li").click(function(){
-        $(this).parents(".left").find("input").val($(this).text());
+        $(".form .line ul li.active").removeClass('active');
+        $(this).addClass('active').parents(".left").find("input").val($(this).text());
     });
 	$(".portfolio-grid .item").mouseleave(function(e){
 		var parentOffset = $(this).offset();
