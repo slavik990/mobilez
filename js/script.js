@@ -695,8 +695,21 @@ $("#main-menu .prev").click(function(){
             var Coordinates = new google.maps.LatLng(48.618621, 22.298769);
             marker = new google.maps.Marker({
                 map: map,
-                position: Coordinates
+                position: Coordinates,
+                tooltip: '<B>Mobilez365</B></br>Ukraine, Uzhhorod</br> Shandora Petefi sq., 47'
             });
+
+            var tooltip = new Tooltip({map: map}, marker);
+                tooltip.bindTo("text", marker, "tooltip");
+                google.maps.event.addListener(marker, 'mouseover', function() {
+                    tooltip.addTip();
+                    tooltip.getPos2(marker.getPosition());
+            });
+
+            google.maps.event.addListener(marker, 'mouseout', function() {
+                tooltip.removeTip();
+            });
+
         });
 
 
