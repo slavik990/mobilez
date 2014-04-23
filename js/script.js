@@ -1,5 +1,25 @@
 $(document).ready(function(){
 
+    if (window.location.pathname == "/contactUs.html"){
+       if (window.location.search){
+            var search = window.location.search;
+            searchArr = search.replace("?",'').split("&");
+            var iAmInput = $('form#contact-form').find('input[name="iAm"]');
+            var lookingForInput = $('#contact-form').find('input[name="lookingFor"]');
+            var iAmValue = iAmInput.next('ul').find('li').eq(searchArr[0]).text();
+            var lookingForValue = lookingForInput.next('ul').find('li').eq(searchArr[1]).text();
+            iAmInput.val(iAmValue);
+            lookingForInput.val(lookingForValue);
+       }
+    };
+
+     $("#futterSubmit").click(function(){
+         var iAmIndex = $('.footer ol').eq(0).find('li').index($('.footer ol').eq(0).find('li.active'));
+         var lookingForIndex = $('.footer ol').eq(1).find('li').index($('.footer ol').eq(1).find('li.active'));
+         window.location = "/contactUs.html?" + iAmIndex + "&" + lookingForIndex;
+     });
+
+
     $(".form .button-submit").click(function(){
 
         var email = $('#contact-form input[name="email"]').val();
@@ -242,6 +262,8 @@ $(document).ready(function(){
     });
     $(".footer .list ol li").click(function(){
         $(this).parents(".list").find(">span").text($(this).text());
+        $(this).closest('ol').find('li[class="active"]').removeClass('active');
+        $(this).addClass('active');
         
     });
 	$(".portfolio-grid .item").mouseenter(function(e){
@@ -638,6 +660,8 @@ $("#main-menu .prev").click(function(){
 	setInterval(slideLogo,7000);
 }
 });
+
+
 /*function onDocumentMouseMove(event) {
 	mouseX = event.clientX - windowHalfX;
 	mouseY = event.clientY - windowHalfY;
