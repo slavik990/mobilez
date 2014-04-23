@@ -19,6 +19,81 @@ $(document).ready(function(){
          window.location = "/contactUs.html?" + iAmIndex + "&" + lookingForIndex;
      });
 
+     $('.footer .list').keydown(function(e){
+
+        if(e.keyCode == "38" || e.keyCode == "40" || e.keyCode == "13"){
+            var currLi = $(e.target).find('li.active');
+
+            if (e.keyCode == "38"){
+                var prevLi = currLi.removeClass('active').prev();
+                    if (!prevLi.length == 0){
+                        prevLi.addClass('active');
+                    }
+                    else {
+                        $(e.target).find('li:last').addClass('active');
+                    }
+            return false;
+            }
+            if (e.keyCode == "40"){
+                var nextLi = currLi.removeClass('active').next();
+                    if (!nextLi.length == 0){
+                        nextLi.addClass('active');
+                    }
+                    else {
+                        $(e.target).find('li:first').addClass('active');
+                    }
+            return false;
+            }
+
+            if (e.keyCode == "13"){
+                 $(e.target).find('span').text(currLi.text());
+                 $(e.target).find('ol').hide();
+
+            return false;
+            }
+
+        }
+     });
+
+     $('#contact-form input[name="iAm"], input[name="lookingFor"], .arrow').keydown(function(e){
+
+        if(e.keyCode == "38" || e.keyCode == "40" || e.keyCode == "13"){
+            var curuntCont = $(e.target).closest('.inner');
+            var currLi = curuntCont.find('li.active');
+
+
+            if (e.keyCode == "38"){
+                var prevLi = currLi.removeClass('active').prev();
+                    if (!prevLi.length == 0){
+                        prevLi.addClass('active');
+                    }
+                    else {
+                        curuntCont.find('li:last').addClass('active');
+                    }
+            return false;
+         }
+            if (e.keyCode == "40"){
+                var nextLi = currLi.removeClass('active').next();
+                    if (!nextLi.length == 0){
+                        nextLi.addClass('active');
+                    }
+                    else {
+                        curuntCont.find('li:first').addClass('active');
+                    }
+            return false;
+            }
+
+            if (e.keyCode == "13"){
+                 curuntCont.find('input').val(currLi.text());
+                 curuntCont.find('ul').hide();
+
+            return false;
+            }
+
+        }
+
+     });
+
 
     $(".form .button-submit").click(function(){
 
