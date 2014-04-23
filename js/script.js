@@ -106,7 +106,7 @@ $(document).ready(function(){
 	});
     var flag = false;
     $(window).scroll(function() {
-    if($(window).scrollTop() >  $(window).height()  - 600 && flag == false && $(window).scrollTop() <  ($(window).height()*2)){
+    if($(window).scrollTop() > $("#about-us").scrollTop()-$(window).height()/2 && flag == false && $(window).scrollTop() <  ($(window).height()*2)){
 
 /*        var arr = $(".numbers .num .number");
         var digW = 67.2;
@@ -577,61 +577,52 @@ $("#main-menu .prev").click(function(){
 			
 		});
 	}
-    if ($("#google-map").length){
-    var mapOptions = {
-        scrollwheel: false,
-        mapTypeControl: false,
-        panControl: false,
-        zoomControl: true,
-        zoomControlOptions: {
-            style: google.maps.ZoomControlStyle.LARGE,
-            position: google.maps.ControlPosition.LEFT_CENTER
-        },
-        scaleControl: false,
-        overviewMapControl: false,
-        streetViewControl: false,
-        zoom: 5,
-        center: new google.maps.LatLng(48.617887, 22.291573),
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-    var map = new google.maps.Map(document.getElementById('google-map'), mapOptions);
-    var Marker = new google.maps.MarkerImage("http://www.google.com/intl/en_us/mapfiles/ms/micons/orange-dot.png", null, null, "", "");
-    var Coordinates = new google.maps.LatLng(48.618621, 22.298769);
-    var home = new google.maps.Marker({
-        position: Coordinates,
-        map: map,
-        icon: Marker
-    });
-
-    // style map
-    var map_color = [
-            {
-                featureType: "all", elementType: "all", stylers: [
-                { hue: "#3344АА" },
-                { saturation: -50 },
-                { gamma: 1 },
-                { visibility: "on" },
-                { lightness: 30 },
-                { invert_lightness: false }
-            ]
-            }
-        ],
-        styledMapOptions = { name: "mobilesoft356" },
-        maptype = new google.maps.StyledMapType(map_color, styledMapOptions);
-    map.mapTypes.set('mobilesoft365', maptype);
-    map.setMapTypeId('mobilesoft365');
-
-    marker = new google.maps.Marker({
-        icon: Marker,
-        map: map,
-        position: Coordinates
-    });
-    google.maps.event.addDomListener(window, 'load', initialize);
+        google.maps.event.addDomListener(window, 'load',function(){
+            var mapOptions = {
+                scrollwheel: false,
+                mapTypeControl: false,
+                panControl: false,
+                zoomControl: true,
+                zoomControlOptions: {
+                    style: google.maps.ZoomControlStyle.LARGE,
+                    position: google.maps.ControlPosition.LEFT_CENTER
+                },
+                scaleControl: false,
+                overviewMapControl: false,
+                streetViewControl: false,
+                zoom: 5,
+                center: new google.maps.LatLng(48.617887, 22.291573),
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            map = new google.maps.Map(document.getElementById('google-map'), mapOptions);
+            // style map
+            var map_color = [
+                {
+                    featureType: "all", elementType: "all", stylers: [
+                        { hue: "#3344АА" },
+                        { saturation: -50 },
+                        { gamma: 1 },
+                        { visibility: "on" },
+                        { lightness: 30 },
+                        { invert_lightness: false }
+                    ]
+                }
+            ],
+            styledMapOptions = { name: "mobilesoft356" },
+            maptype = new google.maps.StyledMapType(map_color, styledMapOptions);
+            map.mapTypes.set('mobilesoft365', maptype);
+            map.setMapTypeId('mobilesoft365');
+            var Coordinates = new google.maps.LatLng(48.618621, 22.298769);
+            marker = new google.maps.Marker({
+                map: map,
+                position: Coordinates
+            });
+        });
 
 
         // Change text inside send button on submit
 
-    var textSlide = function(){
+    /*var textSlide = function(){
         var array =['We become bigger and bigger, smarter and smarter, more talented and have more <span>experience</span> ',
                 '<span>MobileSoft365</span> - is the only company in Transcarpathia engaged mobile development',
                 'We open a new <span>office</span> this month',
@@ -657,8 +648,7 @@ $("#main-menu .prev").click(function(){
     }
     textSlide();
 	setTimeout(chooseSlideElement,getRandomNumber(2000,3000));
-	setInterval(slideLogo,7000);
-}
+	setInterval(slideLogo,7000);*/
 });
 
 

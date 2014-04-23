@@ -74,7 +74,6 @@ body {
     @width: 165px;
     position: absolute;
 	background-color:#50558e;
-    background-image: url("@{imagesfolder}/xmastree.jpg");
     width: 100%;
     height: 100%;
 	background-position:50% 50%;
@@ -1684,8 +1683,24 @@ html[xmlns] .clearfix {
     }
 }
 @media screen and (max-width: 1000px) {
-    .wrap.clr li{
-        
+    .footer{
+        padding:0 10px !important;
+        width:auto;
+        .wrap{
+            width:100%;
+            li{
+                width:100%;
+                padding:10px 0;
+                &.clr{
+                    width:50%;
+                    padding:0;            
+                }
+                #futterSubmit{
+                    float:none;
+                    padding:10px 50px;
+                }
+            }
+        }
     }
     .partners-section .clients-say .item {
         width:100% !important;
@@ -1773,6 +1788,13 @@ html[xmlns] .clearfix {
 
 }
 @media screen and (max-width: 500px) {
+    .footer{
+        padding:0 10px 0 10px !important;
+        width:auto !important;
+        .wrap.clr li{
+            float:none;
+        }
+     }
 	.main-menu{
 		.show-on-mini-tablet{
 			display:none !important;
@@ -2346,10 +2368,12 @@ background-image: url("http://localhost:3000/less/../i/desktop/v-line.png");
                 height:200px;
                 color: black;
                 font-size: 18px;
-                font-weight: 600;
+                resize: none;
+                font-weight: normal;
                    &::-webkit-input-placeholder { color:black; }
                     &::-moz-placeholder { color:black; opacity:1; } /* firefox 19+ */
                     &:-ms-input-placeholder { color:black; } /* ie */
+                    &:-o-input-placeholder { color:black; } /* ie */
                     &textarea:-moz-placeholder { color:black; }
             }
         }
@@ -3054,10 +3078,10 @@ position:relative;
             margin-left:15px;
         .num{
             text-align:left;
-            font-family:helvetica;
+            font-family:'bebasneueregular';
             font-size:70px;
             color:#569DFF;
-            font-weight:bold;
+            font-weight:normal;
             position:relative;
             /*.number{
                 .digit{
@@ -3077,7 +3101,7 @@ position:relative;
                 display:none;
                 position: absolute;
                 top: 5px;
-                right: -10px;
+                right: 20px;
                 font-size:60px;
                 line-height:70px;
                 font-family:arial;
@@ -3086,7 +3110,7 @@ position:relative;
             }
             &.one{
                 .pl{
-                    right: 28px;
+                    right: 48px;
                 }
             }
         }
@@ -3186,6 +3210,18 @@ position:relative;
 }
 
 @media screen and (max-width: 850px) {
+    .footer{
+        padding:0 10px 0 10px !important;
+        width:auto !important;
+        .wrap.clr li label{
+            float:none;
+        }
+        .list{
+            margin:0;
+            float:none;
+            margin:0 10px;
+        }
+    }
     #header-section{
         .inner{
             padding:0;
@@ -3214,4 +3250,31 @@ position:relative;
         padding:0 10px;
     }
 
+}
+@media screen and (max-width: 500px) {
+    .footer{
+        padding:0 !important;
+        position:inherit !important;
+        width:100% !important;
+        .wrap.clr {
+            width:auto !important;
+            padding:0 10px;
+            li{
+                clear:both;
+                width:100%;
+                float:none;
+            }
+        }
+     }
+}
+#google-map *, #google-map *:before, #google-map *:after {
+    -webkit-transform: none !important; 
+}
+
+#google-map,
+#google-map > div.gm-style,
+#google-map > div.gm-style > div:first-child,
+#google-map > div.gm-style > div:first-child > div > div:last-child,
+#google-map > div.gm-style > div:first-child > div > div:last-child * {
+    -webkit-transform: none !important;
 }
