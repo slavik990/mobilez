@@ -1718,7 +1718,7 @@ html[xmlns] .clearfix {
 }
 @media screen and (max-width: 770px) {
 	#header-section{
-		display:none !important;
+//		display:none !important;
 	}
 	.grid-25{
 		width:50% !important;
@@ -1727,7 +1727,6 @@ html[xmlns] .clearfix {
 		width:100% !important;
 	}
 	.social-network{
-		width:150px;
 		margin:0 auto;
 		padding:0;
 	}
@@ -1850,6 +1849,7 @@ html[xmlns] .clearfix {
     overflow:hidden;
     position:relative;
     width:100%;
+    max-height:680px;
     .filter{
         background-color:rgba(3, 16, 34, 0.7);
         position:absolute;
@@ -2150,7 +2150,7 @@ background-image: url("http://localhost:3000/less/../i/desktop/v-line.png");
                 font-weight:normal;
             }
             .inner{
-                height:106px;
+                height:126px;
                 margin-left: 22px;
                 margin-right: 22px;
                 padding:10px;
@@ -3101,14 +3101,14 @@ position:relative;
     padding:0;
     margin:0;
     height:100%;
-    width:600%;
+    width:700%;
     .wrapper-slider{
         .transition(all,0.3s);
         padding:0;
         li{
             overflow:hidden;
             float:left;
-            width:16.6666%;
+            width:14.2857%;
             padding:0;
             margin:0;
             list-style:none;
@@ -3127,9 +3127,9 @@ position:relative;
         text-align:center;
         margin:0 auto;
         padding:0;
-        width:108px;
+        width:126px;
         height:10px;
-        margin-left:-54px;
+        margin-left:-63px;
         padding:5px 10px;
         &.x5{
             width:90px;
@@ -3164,4 +3164,32 @@ position:relative;
             } 
         }
     }
+}
+
+@media screen and (max-width: 850px) {
+    #header-section{
+        .inner{
+            padding:0;
+        }
+    }
+}
+@media screen and (max-width: 670px) {
+	#header-section{
+		display:none !important;
+	}
+
+    .contactUs-section .inTouch {
+        width:100%;
+    }
+    .contactUs-section .contactUs{
+        width:335px;
+        margin:0 auto;
+        float:none;
+    }
+
+
+    .contactUs-section{
+        padding:0 10px;
+    }
+
 }
