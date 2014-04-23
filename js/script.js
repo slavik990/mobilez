@@ -432,6 +432,15 @@ $(document).ready(function(){
 	});
 
 	function resizeDocument(){
+        $(".partners-section .clients-say .inner").css({"height":"auto"});
+        var max = 0;
+        $(".partners-section .clients-say .inner").each(function(){
+            if (max<$(this).height()){
+                max = $(this).height();
+            }
+        });
+        $(".partners-section .clients-say .inner").height(max-7);
+
         if ($(".navigation-main-slider").length>0){
             var index = $(".navigation-main-slider li span").index($(".navigation-main-slider li span.active"));
             var k = -$(window).width()*index;
