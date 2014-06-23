@@ -12,6 +12,9 @@ $(document).ready(function(){
             itemsDesktopSmall : [979,3]
         });
     }
+
+	
+	
     if ($(".player").length!==0){
         $(".player").mb_YTPlayer({autoPlay:true});
 	    $('.scrollyeah').scrollyeah();
@@ -596,7 +599,15 @@ $(document).ready(function(){
                 max = $(this).height();
             }
         });
+		max = 0;
+		$(".main-page .items .item .inner").css({"height":"auto"});
+		$(".main-page .items .item .inner").each(function(){
+            if (max<$(this).height()){
+                max = $(this).height();
+            }
+        });
 
+		$(".main-page .items .item .inner").css({"height":max+"px"});
 
    $(".resume .inner").css({"height":"auto"});
         var max = 0;
