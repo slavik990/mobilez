@@ -2530,7 +2530,6 @@ section.main-page{
         font-weight:100;
         }
         .social{
-            margin-top:20px;
             a{
                 line-height:40px;
             }
@@ -4772,7 +4771,6 @@ margin-right: 30px;
 	color: #fff;
 	position: relative;
 	z-index: 25;
-	margin-top: -118px;
 	text-align: left;
 	height: 58px;
 	overflow: hidden;
@@ -4811,5 +4809,38 @@ margin-right: 30px;
 		border-radius: 0;
 		border: 0;
 		color: #61b3da;
+	}
+}
+
+section.downloads {
+    width: 221px;
+	margin-left:10px;
+	ul{
+		li{
+			list-style:none;
+			a {
+				background: url("../i/icons.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+				color: #b1b1be !important;
+				display: block;
+				font-size: 1.1em;
+				height: 36px;
+				line-height: 1.36;
+				margin: 0 0 5px;
+				padding: 4px 0 0 48px;
+				text-decoration: none !important;
+				width: 100px;
+				padding-left: 42px;
+				&:hover {
+					background-position: 0 -42px;
+				}
+				span {
+					color: #fff;
+					display: block;
+					font-size: 10px;
+					font-weight: bold;
+					line-height: 1.25;
+				}
+			}
+		}
 	}
 }
