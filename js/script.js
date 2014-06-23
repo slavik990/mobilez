@@ -1,5 +1,111 @@
 $(document).ready(function(){
+    if ($(".home-owl").length!==0){
+        $(".home-owl").owlCarousel({
+            autoPlay: 5000, //Set AutoPlay to 5 seconds
+            autoHeight : true,
+            singleItem:true,
+            pagination: false,
+            navigation : true,
+            navigationText : ["<",">"],
+            items : 1,
+            itemsDesktop : [1199,4],
+            itemsDesktopSmall : [979,3]
+        });
+    }
+    if ($(".player").length!==0){
+        $(".player").mb_YTPlayer({autoPlay:true});
+	    $('.scrollyeah').scrollyeah();
+    }
+      $(".partner-carusel .right-arrow").click(function(e){
+          var k=-$(".partner-carusel .slider-inner .item").width();
+          $(".partner-carusel .slider-inner").css({"transform":"translateX("+k+"px)"});
+      });  
+    $(".button-container .red-button").click(function(e){
+        $('html, body').animate({
+            scrollTop: $('footer').offset().top
+        }, 'slow');
+    });
+    $(".details-kurs").click(function(e){
+        $('html, body').animate({
+            scrollTop: $('.fromZero').offset().top
+        }, 'slow');
+    });
+    $(".plan a").click(function(e){
+        $('html, body').animate({
+            scrollTop: $('.resume').offset().top
+        }, 'slow');
+    });
+    $(".stick_menu .connectwith a").click(function(e){
+        e.preventDefault();
+        _gaq.push(["_trackEvent", "Client Feedback", "Sales", $(this).attr("class")]);
+        var self = this;
+        setTimeout(function() {
+            window.location = $(self).attr("href");
+        }, 100);
 
+    });
+    $(".stick_menu .front").click(function(){
+        $(this).hide();
+        $(".stick_menu .back").show();
+        $(".stick_menu .pointer").show();
+    });
+    $(".stick_menu .back").click(function(){
+        $(this).hide();
+        $(".stick_menu .pointer").hide();
+        $(".stick_menu .front").show();
+    });
+
+    if (window.Swiper){
+        var ALL = $('.portfolio-slider');
+        var pagi = $('.navigation-slider');
+        var slidesPerView = 1;
+        if ($('.portfolio-slider').parents(".partner-carusel").length>0){
+            slidesPerView = 5;
+        }
+        swiperOpts = {
+            def: {
+                grabCursor:true,
+                loop:true,
+                slidesPerView:slidesPerView
+
+            },
+            pag: {
+                paginationElement:'span',
+                paginationVisibleClass:'',
+                paginationClickable:true,
+
+            }
+        };
+	    ALL.each(function(i){
+		    var mySwiper= new Swiper(this, $.extend({resizeReInit: true,pagination:pagi[i], onInit: function(swiper) {
+      var w = window.innerWidth;
+
+      swiper.params.slidesPerView = w < 560 ? 1 : (w < 830 ? 2 : (w < 940 ? 3 : 4));
+    }
+                                                    },swiperOpts.def, swiperOpts.pag));
+            $('#main-menu .prev').on('click', function(e){
+                e.preventDefault();
+                mySwiper.swipePrev();
+            });
+            $('#main-menu .next').on('click', function(e){
+                e.preventDefault();
+                mySwiper.swipeNext();
+            });
+            $('.partner-carusel .prev').on('click', function(e){
+                e.preventDefault();
+                alert();
+                mySwiper.swipePrev();
+            });
+            $('.partner-carusel .next').on('click', function(e){
+                e.preventDefault();
+                mySwiper.swipeNext();
+            });
+	    });
+
+
+
+
+    }
     if (window.location.pathname == "/contactUs.html"){
        if (window.location.search){
             var search = window.location.search;
@@ -115,12 +221,56 @@ $(document).ready(function(){
             return false;
         }
         else { $('div.inTouch').find('ul.formErrors li').hide();
-            $.post("mail.php", $("#contact-form").serialize(),  function(data) {   });
+            $.post("mail.php", $("#contact-form").serialize(),  function(data) {  _gaq.push(['_trackEvent', "Client Feedback", "Email", "Email"]);
             $('#success').html('The Message sent!');
-            $('#success').hide(2000);
+            $('#success').hide(2000);   });
+          
             return false;
         }
     });
+
+
+    $(".landingSend .red-button").click(function(){
+        var form = $(this).parents(".landingSend");
+        var email = form.find('input[name="email"]').val();
+        var regEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        var emailError = form.find('.error');
+
+        if (!regEmail.test(email)) {
+            emailError.show();
+            return false;
+        }
+        else {
+            emailError.hide();
+            $.post("mailLanding.php", $(this).parents(".landingSend").serialize(),  function(data) {
+                _gaq.push(['_trackEvent', "Client Feedback Landing", "Email", "Email"]);
+                form.find('.success').html('The Message sent!');
+                form.find('.success').hide(2000);
+            });
+        }
+    });
+
+
+   $(".itform .send").click(function(){
+        var form = $(this).parents(".itform");
+        var email = form.find('input[name="email"]').val();
+        var regEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        var emailError = form.find('.error');
+
+        if (!regEmail.test(email)) {
+            emailError.show();
+            return false;
+        }
+        else {
+            emailError.hide();
+            $.post("mailIT.php", $(this).parents(".itform").serialize(),  function(data) {
+                _gaq.push(['_trackEvent', "Client Feedback IT School", "Email", "Email"]);
+                form.find('.success').html('The Message sent!');
+                form.find('.success').hide(2000);
+            });
+        }
+    });
+        
 
 
 	var portfolioAnimTime = 200;
@@ -181,6 +331,7 @@ $(document).ready(function(){
 	});
     var flag = false;
     $(window).scroll(function() {
+
     if($(window).scrollTop() > $("#about-us").scrollTop()-$(window).height()/2 && flag == false && $(window).scrollTop() <  ($(window).height()*2)){
 
 /*        var arr = $(".numbers .num .number");
@@ -437,6 +588,7 @@ $(document).ready(function(){
 	});
 
 	function resizeDocument(){
+        $(".inner-section").css({"padding-top":(($(".home-section").height()-$(".inner-section").height())/2)+"px","padding-bottom":(($(".home-section").height()-$(".inner-section").height())/2)+"px"});
         $(".partners-section .clients-say .inner").css({"height":"auto"});
         var max = 0;
         $(".partners-section .clients-say .inner").each(function(){
@@ -444,28 +596,48 @@ $(document).ready(function(){
                 max = $(this).height();
             }
         });
-        $(".partners-section .clients-say .inner").height(max-7);
+
+
+   $(".resume .inner").css({"height":"auto"});
+        var max = 0;
+        $(".resume .inner").each(function(){
+            if (max<$(this).height()){
+                max = $(this).height();
+            }
+        });
+		$(".resume .inner").height(max-60);
+
+		var h = $(window).height();
+		$('#main-menu').css({ 'height': (h-43) + 'px' });
+      
 
         if ($(".navigation-main-slider").length>0){
             var index = $(".navigation-main-slider li span").index($(".navigation-main-slider li span.active"));
             var k = -$(window).width()*index;
             $(".navigation-main-slider").parents(".portfolio-slider").find(".wrapper-slider").css({"-webkit-transform":"translate3d("+k+"px, 0px, 0px)","-moz-transform":"translate3d("+k+"px, 0px, 0px)","transform":"translateX("+k+"px)","-o-transform:":"translateX("+k+"px)"});
         }
-		var h = $("#main-menu").height();
-		var w = $(window).width();
+//        $(".main-slider ul li img").css({"width":$(".main-slider ul li").width()+"px","height":$(".main-slider ul li").height()+"px"});
+		h = $("#main-menu").height();
+		var w = $(".main-slider ul li").width();
+        console.log(w);
+        console.log(h);
         if (w/h>1920/1000){
             var h2 = w/1920*1000;
-            $(".main-slider .wrapper-slider img").height(h2).width(w).css({"margin-top":(h-h2)/2,"margin-left":"0px"});
+            $(".main-slider ul li img").css({"width":w+"px","height":h2+"px"}).css({"margin-top":(h-h2)/2,"margin-left":"0px"});
         }else{
             var w2 = 1920/1000*h;
             var index = $(".navigation-main-slider li span").index($(".navigation-main-slider li span.active"));
-            $(".main-slider .wrapper-slider img").eq(index).height(h).width(w2).css({"margin-left":(w-w2)/2,"margin-top":"0px"});
+            $(".main-slider ul li img").eq(index).height(h).width(w2).css({"width":w2+"px","height":h+"px"}).css({"margin-left":(w-w2)/2,"margin-top":"0px"});
         }
+
+
         var th = $(".top-name").height();
         var ph = (h-th)/2+50;
         $(".top-name").css({"margin-top":ph+"px"});
 		if (h<$(".main-menu").height()) h= $(".main-menu").height();
-		$('#main-menu').css({ 'height': (h-43) + 'px' });
+        $(".main-slider .wrapper-slider").css({ 'height': ($('#main-menu').height()) + 'px' });
+        $(".main-slider .wrapper-slider li").css({ 'height': ($('#main-menu').height()) + 'px' });
+
 		$('.main-menu-container').css({ 'height': h + 'px' });
 		w = $("#our-team .container").width()+320;
 		var tg = $(".team-grid").width();
@@ -538,18 +710,10 @@ $(document).ready(function(){
         $(this).parents(".portfolio-slider").find(".wrapper-slider").css({"-webkit-transform":"translate3d("+k+"px, 0px, 0px)","-moz-transform":"translate3d("+k+"px, 0px, 0px)","transform":"translateX("+k+"px)","-o-transform":"translate3d("+k+"px, 0px, 0px)"});
 
     });
+    var countInSlider = 10 - 1;
   $(".navigation-main-slider li").click(function(){
       var k = $(this).parents(".navigation-main-slider").find("li").index($(this));
-      if (k==0){
-          $("#main-menu .prev").addClass("non-active");
-      }else{
-          $("#main-menu .prev").removeClass("non-active");
-      }
-     if (k==6){
-          $("#main-menu .next").addClass("non-active");
-      }else{
-          $("#main-menu .next").removeClass("non-active");
-      }
+ 
       k = -$(window).width()*k;
       $(this).parents(".navigation-main-slider").find(".active").removeClass("active");
       $(this).find("span").addClass("active");
@@ -566,58 +730,7 @@ $(document).ready(function(){
         }
     });
 
-    $("#main-menu .next").click(function(){
-        var k = $(".navigation-main-slider li span").index($(".navigation-main-slider .active"))+1;
-      if (k==0){
-          $("#main-menu .prev").addClass("non-active");
-      }else{
-          $("#main-menu .prev").removeClass("non-active");
-      }
-     if (k==6){
-          $("#main-menu .next").addClass("non-active");
-      }else{
-          $("#main-menu .next").removeClass("non-active");
-      }
-      k = -$(window).width()*k;
-      $(".navigation-main-slider").find(".active").removeClass("active").parent().next().find("span").addClass("active");
-      $(".navigation-main-slider").parents(".portfolio-slider").find(".wrapper-slider").css({"-webkit-transform":"translate3d("+k+"px, 0px, 0px)","-moz-transform":"translate3d("+k+"px, 0px, 0px)","transform":"translateX("+k+"px)"});
-		var h = $(window).height();
-		var w = $(window).width();
-        if (w/h>1920/1000){
-            var h2 = w/1920*1000;
-            $(".main-slider .wrapper-slider img").height(h2).width(w).css({"margin-top":(h-h2)/2});
-        }else{
-            var w2 = 1920/1000*h;
-           var index = $(".navigation-main-slider li span").index($(".navigation-main-slider li span.active"));
-            $(".main-slider .wrapper-slider img").eq(index).height(h).width(w2).css({"margin-left":(w-w2)/2});
-        }
-    });
-$("#main-menu .prev").click(function(){
-        var k = $(".navigation-main-slider li span").index($(".navigation-main-slider .active"))-1;
-      if (k==0){
-          $("#main-menu .prev").addClass("non-active");
-      }else{
-          $("#main-menu .prev").removeClass("non-active");
-      }
-     if (k==6){
-          $("#main-menu .next").addClass("non-active");
-      }else{
-          $("#main-menu .next").removeClass("non-active");
-      }
-      k = -$(window).width()*k;
-      $(".navigation-main-slider").find(".active").removeClass("active").parent().prev().find("span").addClass("active");
-      $(".navigation-main-slider").parents(".portfolio-slider").find(".wrapper-slider").css({"-webkit-transform":"translate3d("+k+"px, 0px, 0px)","-moz-transform":"translate3d("+k+"px, 0px, 0px)","transform":"translateX("+k+"px)"});
-		var h = $(window).height();
-		var w = $(window).width();
-        if (w/h>1920/1000){
-            var h2 = w/1920*1000;
-            $(".main-slider .wrapper-slider img").height(h2).width(w).css({"margin-top":(h-h2)/2});
-        }else{
-            var w2 = 1920/1000*h;
-            var index = $(".navigation-main-slider li span").index($(".navigation-main-slider li span.active"));
-            $(".main-slider .wrapper-slider img").eq(index).height(h).width(w2).css({"margin-left":(w-w2)/2});
-        }
-    });
+   
 
 	var customSlider=function(item){
 		item.forEach(function(el){
@@ -666,46 +779,139 @@ $("#main-menu .prev").click(function(){
 			
 		});
 	}
+    if (window.google)     
         google.maps.event.addDomListener(window, 'load',function(){
+
+    var zoomLevel = parseFloat($('#google-map').attr('data-zoom-level'));
+    var centerlat = parseFloat($('#google-map').attr('data-center-lat'));
+	var centerlng = parseFloat($('#google-map').attr('data-center-lng'));
+	var markerImg = $('#google-map').attr('data-marker-img');
+	var enableZoom = $('#google-map').attr('data-enable-zoom');
+	var greyscale = $('#google-map').attr('data-greyscale');
+	var extraColor = $('#google-map').attr('data-extra-color');
+	var enableAnimation = $('#google-map').attr('data-enable-animation');
+	var animationDelay = 0; 
+	
+	if( isNaN(zoomLevel) ) { zoomLevel = 12;}
+	if( isNaN(centerlat) ) { centerlat = 48.617887;}
+	if( isNaN(centerlng) ) { centerlng = 22.291573;}
+	if( typeof enableAnimation != 'undefined' && enableAnimation == 1 && $(window).width() > 690) { animationDelay = 180; enableAnimation = google.maps.Animation.BOUNCE } else { enableAnimation = null; }
+
+    var latLng = new google.maps.LatLng(centerlat,centerlng);
+    
+    //color
+  
+		
+		styles = [
+	    
+	    {
+			featureType: "poi",
+			elementType: "labels",
+			stylers: [{
+				visibility: "off"
+			}]
+		}, 
+		{ 
+			featureType: "road.local", 
+			elementType: "labels.icon", 
+			stylers: [{ 
+				"visibility": "off" 
+			}] 
+		},
+		{ 
+			featureType: "road.arterial", 
+			elementType: "labels.icon", 
+			stylers: [{ 
+				"visibility": "off" 
+			}] 
+		},
+		{
+			featureType: "road",
+			elementType: "geometry.stroke",
+			stylers: [{
+				visibility: "off"
+			}]
+		}, 
+		{
+			elementType: "geometry",
+			stylers: [{
+				saturation: -100
+			}]
+		},
+		{
+			elementType: "labels",
+			stylers: [{
+			saturation: -100
+			}]
+		}, 
+		{
+			featureType: "poi",
+			elementType: "geometry.fill",
+			stylers: [{
+				color: "#ffffff"
+			}]
+		},
+		{
+			featureType: "landscape",
+			stylers: [{
+				color: "#ffffff"
+			}]
+		}, 
+		{
+			featureType: "road",
+			elementType: "geometry.fill",
+			stylers: [ {
+				color: "#eaeaea"
+			}]
+		}, 
+		{
+			featureType: "water",
+			elementType: "geometry",
+			stylers: [{
+				color: "#b9e7f4"
+			}]
+		}];
+	        
+	        var styledMap = new google.maps.StyledMapType(styles,
+                                                          {name: "Styled Map"});
+            
+
+
+            var zoom = 5;
+            if ($("#google-map").parent().hasClass("google")){
+                zoom =4;
+                
+            }
             var mapOptions = {
+                center: latLng,
+                zoom: zoom,
+                mapTypeControlOptions: {
+                    mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+   	            },
                 scrollwheel: false,
-                mapTypeControl: false,
                 panControl: false,
-                zoomControl: true,
-                zoomControlOptions: {
+	            zoomControl: enableZoom,	  
+	            zoomControlOptions: {
                     style: google.maps.ZoomControlStyle.LARGE,
                     position: google.maps.ControlPosition.LEFT_CENTER
-                },
-                scaleControl: false,
-                overviewMapControl: false,
-                streetViewControl: false,
-                zoom: 5,
-                center: new google.maps.LatLng(48.617887, 22.291573),
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            };
+   	            },
+	            mapTypeControl: false,
+	            scaleControl: false,
+	            streetViewControl: false
+	            
+    };
             map = new google.maps.Map(document.getElementById('google-map'), mapOptions);
             // style map
-            var map_color = [
-                {
-                    featureType: "all", elementType: "all", stylers: [
-                        { hue: "#3344АА" },
-                        { saturation: -50 },
-                        { gamma: 1 },
-                        { visibility: "on" },
-                        { lightness: 30 },
-                        { invert_lightness: false }
-                    ]
-                }
-            ],
-            styledMapOptions = { name: "mobilesoft356" },
-            maptype = new google.maps.StyledMapType(map_color, styledMapOptions);
-            map.mapTypes.set('mobilesoft365', maptype);
-            map.setMapTypeId('mobilesoft365');
+//                maptype = new google.maps.StyledMapType(styledMap, styledMapOptions);
+            map.mapTypes.set('map_style', styledMap);
+//            map.mapTypes.set('map_style', maptype);
+            map.setMapTypeId('map_style');
             var Coordinates = new google.maps.LatLng(48.618621, 22.298769);
             marker = new google.maps.Marker({
                 map: map,
                 position: Coordinates,
-                tooltip: '<B>Mobilez365</B></br>Ukraine, Uzhhorod</br> Shandora Petefi sq., 47'
+                tooltip: '<B>Mobilez365</B></br>Ukraine, Uzhhorod</br> Shandora Petefi sq., 47',
+                icon:'../i/desktop/marker1.png'
             });
 
             var tooltip = new Tooltip({map: map}, marker);
