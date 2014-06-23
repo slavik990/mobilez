@@ -167,12 +167,19 @@
   <div class="container">
     <div class="row">
       <div class="span12 solutions-contact">
-		<!--<umbraco:Macro ID="Macro1" action="Index" controller="SolutionsForm" formtoken="solutionsform" Alias="MvcRenderAction" runat="server"></umbraco:Macro>-->
 		<form id="solutionsform" action="" method="POST">
 
 		  <input name="__RequestVerificationToken" type="hidden" value="1BPBjFLzJWcs98qK_guwBwbZJmPiy1RvYc10zgnj0_JtkGdlKBYm9REOyu1__ZBRG0TQ1bbvK_uMsH_0dt2JUp_XgQP5O3q0xpGX4h-cjtQ1">
           
-		  <p class="dialog first"><span>How can we help? </span><input class="input-flat span5" type="search" name="problem"> <a id="js-problem-button" href="#" class="btn-flat">Let’s talk »</a></p>
+		  <p class="dialog first">
+			<span>
+			  <input class="input-flat span5" type="text" name="problem" placeholder="How can we help?"/>
+			</span>
+			<span>
+			  <input class="input-flat span5" type="text" name="problem" placeholder="Email adress"/> 
+			</span>
+			<a id="js-problem-button" href="#" class="btn-flat">Let’s talk »</a>
+		  </p>
 		  <input type="text" name="RefURL" style="display:none" value=""></form>
       </div>
     </div>
