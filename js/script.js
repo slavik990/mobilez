@@ -1,4 +1,11 @@
 $(document).ready(function(){
+	$(".mobile-development-platforms .float-item").click(function(){
+		$(this).parent().find(".active").removeClass("active");
+		$(this).addClass("active");
+		$(".tabs .tab.active").removeClass("active");
+		var n = $(".mobile-development-platforms .float-item").index($(this));
+		$(".tabs .tab").eq(n).addClass("active");
+	});
     if ($(".home-owl").length!==0){
         $(".home-owl").owlCarousel({
             autoPlay: 5000, //Set AutoPlay to 5 seconds

@@ -16,7 +16,7 @@ $(document).ready(function(){
 		   
 	    }
     }
-   $(window).on("mousewheel",scrollMenu);
-	setInterval(scrollMenu,251)	;
-    $(".inner-section").css({"padding-top":(($(".home-section").height()-$(".inner-section").height())/2)+"px"});
+//   $(window).on("mousewheel",scrollMenu);
+//	setInterval(scrollMenu,251)	;
+    //$(".inner-section").css({"padding-top":(($(".home-section").height()-$(".inner-section").height())/2)+"px"});
 });
