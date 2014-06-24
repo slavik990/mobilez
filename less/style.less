@@ -668,7 +668,6 @@ span {
    padding:0 130px;
     overflow: hidden;
         float:none;
-        max-width:1100px;
         margin:0 auto;
     .center{
         text-align: center;
@@ -1918,13 +1917,20 @@ section.main-page{
 		margin-top:100px;
 		h3{
 			color:#3075ff;
+			font-size:22px;
+			font-weight:bold;
+			text-transform:uppercase;
+			font-family: Roboto, Arial, sans-serif;
 		}
 		.text{
 			color:#3075ff;
 			text-align:center;
+			font-size:22px;
+			font-weight:bold;
 		}
 	}
 	.items{
+		font-size:20px;
 		.item{
 			width:33.33%;
 			float:left;
@@ -1934,7 +1940,7 @@ section.main-page{
 				border:1px solid black;
 				margin:10px 20px;
 				text-decoration:none;
-				color:black;
+				color: #777;
 				&:hover{
 					color:black;
 			}
@@ -1954,19 +1960,25 @@ section.main-page{
     background-color:white;
     width:100%;
     box-shadow: 0 1px 3px rgba(31, 50, 63, 0.25);
+	height:75px;
     .inner{
         margin:0 auto;
         padding:0 130px;
         float:none;
-        max-width: 1100px;
     }
+	.right{
+		.text, a{
+			font-size:18px;
+			color: #777;
+		}
+	}
     .logo{
         text-align: left;
         margin: 0;
         line-height: 54px;
         color: #3075ff;
         text-transform: uppercase;
-        font-size: 44px;
+        font-size: 32px;
         font-weight: 300;
         font-family: 'bebasneueregular';
         padding:0;
@@ -2007,7 +2019,7 @@ section.main-page{
         z-index:1000;
 		border:none;
         a{
-            line-height:50px;
+            line-height:1px;
             display: block;
 			float:left;
             text-transform: uppercase;
@@ -2022,7 +2034,7 @@ section.main-page{
 			margin:0;
 			border:none;
 			width:20%;
-			text-align:center;
+			text-align:left;
             &.selected{
                 color: #569DFF !important;
             }
@@ -2043,7 +2055,7 @@ section.main-page{
 }
 
 .portfolio-list-section{
-    margin-top:100px;
+    margin-top:140px;
     margin-bottom:100px;
 
     
@@ -2326,7 +2338,7 @@ section.main-page{
     }
 }
 .contactUs-section{
-    margin:30px auto 0 auto;
+    margin:80px auto 0 auto;
     padding: 0 130px;
     font-family:robothin;
     >div{
@@ -2878,7 +2890,7 @@ position:relative;
 
 #service{
     .container{
-        padding: 60px 130px 100px 130px;
+        padding: 120px 130px 100px 130px;
         max-width: 1100px;
     }
     h2{
@@ -3053,7 +3065,7 @@ position:relative;
     }
 
  
-.stick_menu{ text-align:center;z-index:1000; width:185px; min-height:45px; display:none;z-index:100001;}
+.stick_menu{ text-align:center;z-index:1000; width:185px; min-height:45px; display:none;z-index:100001;float:right !important;}
 .stick_menu .pointer{background:url(../i/stick_menu_arrow.png) no-repeat 0; width:20px; height:42px; position:absolute; right:-20px; top:50%; margin-top:-21px; z-index:1000; display:none}
 .stick_menu .front{display:block;background:url(../i/lets_connect.png) no-repeat 0 0; width:215px; min-height:45px; height:auto; cursor:pointer;}
 .stick_menu .back{	
@@ -3099,7 +3111,9 @@ position:relative;
 	.button{
 		text-align:center;
 		padding-top:20px;
-		
+		display:block;
+		background:none;
+		padding-bottom:50px;
 		.left{
 			width:50%;
 			float:left;
@@ -3138,10 +3152,11 @@ position:relative;
             }
         }
     }
+    .container{
+//		margin-top:110px !important;
+	}
     .partner-carusel{
         width:100%;
-        background-color:#ebebeb;
-        padding-bottom:42px;
         .container{
             height:140px;
             margin:0 auto;
@@ -4052,8 +4067,10 @@ text-align: center;
 
 #mobile-dev{
 	.container{
-		padding-top:50px;
 }
+	.header{
+		padding-top:100px;
+	}
 	.tabs{
 		.tab{
 			display:none;
@@ -4089,7 +4106,6 @@ text-align: center;
 			padding: 20px 20px 18px;
 		}
 		.header h1, .header h3 {
-			margin: 5px;
 			text-align: center;
 			color: #fff;
 			line-height: 35px;
@@ -4813,6 +4829,35 @@ margin-right: 30px;
 	a{
 		text-decoration:none;
 	}
+	.dialog{
+		.field{
+			width:33.33%;
+			display:block;
+			float:left;
+			.inner{
+				display:block;
+				padding:0 5px;
+			}
+		}
+		input{
+			display:block;
+			padding:0;
+			margin:0;
+			width:100%;
+			float:left;
+			height:58px;
+			
+		}
+		a{
+			display:block;
+			width:100%;
+			float:right;
+			text-align:center;
+			padding:0;
+			height:58px;
+			line-height:58px;
+		}
+	}
 }
 
 section.downloads {
@@ -4847,3 +4892,1403 @@ section.downloads {
 		}
 	}
 }
+
+
+
+.ready-to-work {
+	background: #f3f7f9;
+}
+    .ready-to-work .quote-calc{
+        display: block;
+        height: 76px;
+        left: 78px;
+        overflow: hidden;
+        position: absolute;
+        text-indent: -9999px;
+        top: 113px;
+        width: 76px;
+        background: url("/images/plus_sel.png") no-repeat scroll -76px -76px transparent;
+    }
+        .ready-to-work .quote-calc:active, .ready-to-work .quote-calc:focus{
+            background: url("/images/plus_sel.png") no-repeat scroll -76px 0px transparent;
+        }
+    .ready-to-work .quote-calc:hover{
+        background: url("/images/plus_sel.png") no-repeat scroll 0 0px transparent;
+    }
+
+	.ready-to-work .wrap {
+		padding: 30px 0 30px;
+		width: 980px;
+		height: 425px;
+        text-align: center;
+	}
+
+	.ready-to-work h2 {
+		font-size: 38px;
+	}
+
+	.ready-to-work p {
+		font: 300 18px/1.5 'Open Sans';
+		color: #73737c;
+	}
+
+	.ready-to-work .get-a-quote-btn {
+		margin: 10px 0 0;
+	}
+
+		.ready-to-work .get-a-quote-btn a {
+			width: 186px;
+			height: 59px;
+			background: url("/images/cont_us.png") 0 0 no-repeat;
+			margin: 0 0 0 -3px;
+		}
+
+			.ready-to-work .get-a-quote-btn a:hover {
+				background-position: 0 -59px;
+			}
+
+			.ready-to-work .get-a-quote-btn a:active {
+				background-position: 0 -118px;
+			}
+
+		.ready-to-work .get-a-quote-btn.transparent a {
+			width: 229px;
+			height: 71px;
+			background: url(/images/send_button.png) 0 0;
+			margin: 0 0 0 -3px;
+		}
+
+			.ready-to-work .get-a-quote-btn.transparent a:hover {
+				background-position: 0 -71px;
+			}
+
+			.ready-to-work .get-a-quote-btn.transparent a:active {
+				background-position: 0 -142px;
+			}
+.ready-to-work .roundcorners input {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.ready-to-work.formfooter  .form:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ready-to-work.formfooter .form .roundcorners {
+    float: left;
+    width: 309px;
+    margin:15px 0 0 20px;
+}
+
+.ready-to-work.formfooter .form .roundcorners:first-child {
+    margin-left: 0;
+}
+
+.ready-to-work.formfooter  .message{
+    width:100%;
+    margin: 0;
+}
+
+.ready-to-work.formfooter  .message .roundcorners{
+
+}
+
+.ready-to-work.formfooter textarea {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width:100%;
+    height:130px;
+    font-size:14px;
+    padding: 12px 50px;
+}
+.ready-to-work.formfooter .stripes {
+    background: none;
+}
+.ready-to-work.formfooter .roundcorners {
+    float:none;
+    margin-top: 10px;
+}
+.ready-to-work.formfooter .roundcorners:first-child {
+    margin-top: 10px;
+}
+.ready-to-work.formfooter #quoteForm {
+    padding: 0;
+}
+.ready-to-work.formfooter .roundcorners .input-block {
+    padding: 0;
+}
+
+.ready-to-work.formfooter .form:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ready-to-work.formfooter .form > .roundcorners {
+
+}
+
+.roundcorners input {
+    width:180px;
+    padding: 0 50px;
+    height:40px;
+}
+
+.ready-to-work .roundcorners input {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.widthform .roundcorners {
+    margin: 0 15px 20px 15px;
+}
+.widthform .roundcorners input {
+    width:211px;
+    padding: 0 50px;
+    height:40px;
+}
+
+.ready-to-work.formfooter  .form:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ready-to-work.formfooter .form .roundcorners {
+    float: left;
+    width: 309px;
+    margin:15px 0 0 20px;
+}
+
+.ready-to-work.formfooter .form .roundcorners:first-child {
+    margin-left: 0;
+}
+
+.ready-to-work.formfooter  .message{
+    width:100%;
+    margin: 0;
+}
+
+.ready-to-work.formfooter  .message .roundcorners{
+
+}
+
+.ready-to-work.formfooter textarea {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width:100%;
+    height:130px;
+    font-size:14px;
+    padding: 12px 50px;
+}
+.ready-to-work.formfooter .stripes {
+    background: none;
+}
+.ready-to-work.formfooter .roundcorners {
+    float:none;
+    margin-top: 10px;
+}
+.ready-to-work.formfooter .roundcorners:first-child {
+    margin-top: 10px;
+}
+.ready-to-work.formfooter #quoteForm {
+    padding: 0;
+}
+.ready-to-work.formfooter .roundcorners .input-block {
+    padding: 0;
+}
+
+.ready-to-work.formfooter .form:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ready-to-work.formfooter .form > .roundcorners {
+
+}
+
+.roundcorners input {
+    width:180px;
+    padding: 0 50px;
+    height:40px;
+}
+
+.ready-to-work .roundcorners input {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.widthform .roundcorners {
+    margin: 0 15px 20px 15px;
+}
+.widthform .roundcorners input {
+    width:211px;
+    padding: 0 50px;
+    height:40px;
+}
+
+.ready-to-work.formfooter  .form:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ready-to-work.formfooter .form .roundcorners {
+    float: left;
+    width: 309px;
+    margin:15px 0 0 20px;
+}
+
+.ready-to-work.formfooter .form .roundcorners:first-child {
+    margin-left: 0;
+}
+
+.ready-to-work.formfooter  .message{
+    width:100%;
+    margin: 0;
+}
+
+.ready-to-work.formfooter  .message .roundcorners{
+
+}
+
+.ready-to-work.formfooter textarea {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width:100%;
+    height:130px;
+    font-size:14px;
+    padding: 12px 50px;
+}
+.ready-to-work.formfooter .stripes {
+    background: none;
+}
+.ready-to-work.formfooter .roundcorners {
+    float:none;
+    margin-top: 10px;
+}
+.ready-to-work.formfooter .roundcorners:first-child {
+    margin-top: 10px;
+}
+.ready-to-work.formfooter #quoteForm {
+    padding: 0;
+}
+.ready-to-work.formfooter .roundcorners .input-block {
+    padding: 0;
+}
+
+.ready-to-work.formfooter .form:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ready-to-work.formfooter .form > .roundcorners {
+
+}
+
+.roundcorners input {
+    width:180px;
+    padding: 0 50px;
+    height:40px;
+}
+
+.ready-to-work .roundcorners input {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.widthform .roundcorners {
+    margin: 0 15px 20px 15px;
+}
+.widthform .roundcorners input {
+    width:211px;
+    padding: 0 50px;
+    height:40px;
+}
+
+.ready-to-work.formfooter  .form:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ready-to-work.formfooter .form .roundcorners {
+    float: left;
+    width: 309px;
+    margin:15px 0 0 20px;
+}
+
+.ready-to-work.formfooter .form .roundcorners:first-child {
+    margin-left: 0;
+}
+
+.ready-to-work.formfooter  .message{
+    width:100%;
+    margin: 0;
+}
+
+.ready-to-work.formfooter  .message .roundcorners{
+
+}
+
+.ready-to-work.formfooter textarea {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width:100%;
+    height:130px;
+    font-size:14px;
+    padding: 12px 50px;
+}
+.ready-to-work.formfooter .stripes {
+    background: none;
+}
+.ready-to-work.formfooter .roundcorners {
+    float:none;
+    margin-top: 10px;
+}
+.ready-to-work.formfooter .roundcorners:first-child {
+    margin-top: 10px;
+}
+.ready-to-work.formfooter #quoteForm {
+    padding: 0;
+}
+.ready-to-work.formfooter .roundcorners .input-block {
+    padding: 0;
+}
+
+.ready-to-work.formfooter .form:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ready-to-work.formfooter .form > .roundcorners {
+
+}
+
+.roundcorners input {
+    width:180px;
+    padding: 0 50px;
+    height:40px;
+}
+
+.ready-to-work .roundcorners input {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.widthform .roundcorners {
+    margin: 0 15px 20px 15px;
+}
+.widthform .roundcorners input {
+    width:211px;
+    padding: 0 50px;
+    height:40px;
+}
+
+.ready-to-work.formfooter  .form:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ready-to-work.formfooter .form .roundcorners {
+    float: left;
+    width: 309px;
+    margin:15px 0 0 20px;
+}
+
+.ready-to-work.formfooter .form .roundcorners:first-child {
+    margin-left: 0;
+}
+
+.ready-to-work.formfooter  .message{
+    width:100%;
+    margin: 0;
+}
+
+.ready-to-work.formfooter  .message .roundcorners{
+
+}
+
+.ready-to-work.formfooter textarea {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width:100%;
+    height:130px;
+    font-size:14px;
+    padding: 12px 50px;
+}
+.ready-to-work.formfooter .stripes {
+    background: none;
+}
+.ready-to-work.formfooter .roundcorners {
+    float:none;
+    margin-top: 10px;
+}
+.ready-to-work.formfooter .roundcorners:first-child {
+    margin-top: 10px;
+}
+.ready-to-work.formfooter #quoteForm {
+    padding: 0;
+}
+.ready-to-work.formfooter .roundcorners .input-block {
+    padding: 0;
+}
+
+.ready-to-work.formfooter .form:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ready-to-work.formfooter .form > .roundcorners {
+
+}
+
+.roundcorners input {
+    width:180px;
+    padding: 0 50px;
+    height:40px;
+}
+
+.ready-to-work .roundcorners input {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.widthform .roundcorners {
+    margin: 0 15px 20px 15px;
+}
+.widthform .roundcorners input {
+    width:211px;
+    padding: 0 50px;
+    height:40px;
+}
+
+.ready-to-work.formfooter  .form:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ready-to-work.formfooter .form .roundcorners {
+    float: left;
+    width: 309px;
+    margin:15px 0 0 20px;
+}
+
+.ready-to-work.formfooter .form .roundcorners:first-child {
+    margin-left: 0;
+}
+
+.ready-to-work.formfooter  .message{
+    width:100%;
+    margin: 0;
+}
+
+.ready-to-work.formfooter  .message .roundcorners{
+
+}
+
+.ready-to-work.formfooter textarea {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width:100%;
+    height:130px;
+    font-size:14px;
+    padding: 12px 50px;
+}
+.ready-to-work.formfooter .stripes {
+    background: none;
+}
+.ready-to-work.formfooter .roundcorners {
+    float:none;
+    margin-top: 10px;
+}
+.ready-to-work.formfooter .roundcorners:first-child {
+    margin-top: 10px;
+}
+.ready-to-work.formfooter #quoteForm {
+    padding: 0;
+}
+.ready-to-work.formfooter .roundcorners .input-block {
+    padding: 0;
+}
+
+.ready-to-work.formfooter .form:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ready-to-work.formfooter .form > .roundcorners {
+
+}
+
+.roundcorners input {
+    width:180px;
+    padding: 0 50px;
+    height:40px;
+}
+
+.ready-to-work .roundcorners input {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.widthform .roundcorners {
+    margin: 0 15px 20px 15px;
+}
+.widthform .roundcorners input {
+    width:211px;
+    padding: 0 50px;
+    height:40px;
+}
+
+.ready-to-work.formfooter  .form:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ready-to-work.formfooter .form .roundcorners {
+    float: left;
+    width: 309px;
+    margin:15px 0 0 20px;
+}
+
+.ready-to-work.formfooter .form .roundcorners:first-child {
+    margin-left: 0;
+}
+
+.ready-to-work.formfooter  .message{
+    width:100%;
+    margin: 0;
+}
+
+.ready-to-work.formfooter  .message .roundcorners{
+
+}
+
+.ready-to-work.formfooter textarea {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width:100%;
+    height:130px;
+    font-size:14px;
+    padding: 12px 50px;
+}
+.ready-to-work.formfooter .stripes {
+    background: none;
+}
+.ready-to-work.formfooter .roundcorners {
+    float:none;
+    margin-top: 10px;
+}
+.ready-to-work.formfooter .roundcorners:first-child {
+    margin-top: 10px;
+}
+.ready-to-work.formfooter #quoteForm {
+    padding: 0;
+}
+.ready-to-work.formfooter .roundcorners .input-block {
+    padding: 0;
+}
+
+.ready-to-work.formfooter .form:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ready-to-work.formfooter .form > .roundcorners {
+
+}
+
+.roundcorners input {
+    width:180px;
+    padding: 0 50px;
+    height:40px;
+}
+
+.ready-to-work .roundcorners input {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.widthform .roundcorners {
+    margin: 0 15px 20px 15px;
+}
+.widthform .roundcorners input {
+    width:211px;
+    padding: 0 50px;
+    height:40px;
+}
+
+.ready-to-work.formfooter  .form:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ready-to-work.formfooter .form .roundcorners {
+    float: left;
+    width: 309px;
+    margin:15px 0 0 20px;
+}
+
+.ready-to-work.formfooter .form .roundcorners:first-child {
+    margin-left: 0;
+}
+
+.ready-to-work.formfooter  .message{
+    width:100%;
+    margin: 0;
+}
+
+.ready-to-work.formfooter  .message .roundcorners{
+
+}
+
+.ready-to-work.formfooter textarea {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width:100%;
+    height:130px;
+    font-size:14px;
+    padding: 12px 50px;
+}
+.ready-to-work.formfooter .stripes {
+    background: none;
+}
+.ready-to-work.formfooter .roundcorners {
+    float:none;
+    margin-top: 10px;
+}
+.ready-to-work.formfooter .roundcorners:first-child {
+    margin-top: 10px;
+}
+.ready-to-work.formfooter #quoteForm {
+    padding: 0;
+}
+.ready-to-work.formfooter .roundcorners .input-block {
+    padding: 0;
+}
+
+.ready-to-work.formfooter .form:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ready-to-work.formfooter .form > .roundcorners {
+
+}
+
+.roundcorners input {
+    width:180px;
+    padding: 0 50px;
+    height:40px;
+}
+
+.ready-to-work .roundcorners input {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.widthform .roundcorners {
+    margin: 0 15px 20px 15px;
+}
+.widthform .roundcorners input {
+    width:211px;
+    padding: 0 50px;
+    height:40px;
+}
+
+.ready-to-work.formfooter  .form:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ready-to-work.formfooter .form .roundcorners {
+    float: left;
+    width: 309px;
+    margin:15px 0 0 20px;
+}
+
+.ready-to-work.formfooter .form .roundcorners:first-child {
+    margin-left: 0;
+}
+
+.ready-to-work.formfooter  .message{
+    width:100%;
+    margin: 0;
+}
+
+.ready-to-work.formfooter  .message .roundcorners{
+
+}
+
+.ready-to-work.formfooter textarea {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width:100%;
+    height:130px;
+    font-size:14px;
+    padding: 12px 50px;
+}
+.ready-to-work.formfooter .stripes {
+    background: none;
+}
+.ready-to-work.formfooter .roundcorners {
+    float:none;
+    margin-top: 10px;
+}
+.ready-to-work.formfooter .roundcorners:first-child {
+    margin-top: 10px;
+}
+.ready-to-work.formfooter #quoteForm {
+    padding: 0;
+}
+.ready-to-work.formfooter .roundcorners .input-block {
+    padding: 0;
+}
+
+.ready-to-work.formfooter .form:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ready-to-work.formfooter .form > .roundcorners {
+
+}
+
+.roundcorners input {
+    width:180px;
+    padding: 0 50px;
+    height:40px;
+}
+
+.ready-to-work .roundcorners input {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.widthform .roundcorners {
+    margin: 0 15px 20px 15px;
+}
+.widthform .roundcorners input {
+    width:211px;
+    padding: 0 50px;
+    height:40px;
+}
+
+.ready-to-work.formfooter  .form:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ready-to-work.formfooter .form .roundcorners {
+    float: left;
+    width: 309px;
+    margin:15px 0 0 20px;
+}
+
+.ready-to-work.formfooter .form .roundcorners:first-child {
+    margin-left: 0;
+}
+
+.ready-to-work.formfooter  .message{
+    width:100%;
+    margin: 0;
+}
+
+.ready-to-work.formfooter  .message .roundcorners{
+
+}
+
+.ready-to-work.formfooter textarea {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width:100%;
+    height:130px;
+    font-size:14px;
+    padding: 12px 50px;
+}
+.ready-to-work.formfooter .stripes {
+    background: none;
+}
+.ready-to-work.formfooter .roundcorners {
+    float:none;
+    margin-top: 10px;
+}
+.ready-to-work.formfooter .roundcorners:first-child {
+    margin-top: 10px;
+}
+.ready-to-work.formfooter #quoteForm {
+    padding: 0;
+}
+.ready-to-work.formfooter .roundcorners .input-block {
+    padding: 0;
+}
+
+.ready-to-work.formfooter .form:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ready-to-work.formfooter .form > .roundcorners {
+
+}
+
+.roundcorners input {
+    width:180px;
+    padding: 0 50px;
+    height:40px;
+}
+
+.ready-to-work .roundcorners input {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.widthform .roundcorners {
+    margin: 0 15px 20px 15px;
+}
+.widthform .roundcorners input {
+    width:211px;
+    padding: 0 50px;
+    height:40px;
+}
+
+.ready-to-work.formfooter  .form:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ready-to-work.formfooter .form .roundcorners {
+    float: left;
+    width: 309px;
+    margin:15px 0 0 20px;
+}
+
+.ready-to-work.formfooter .form .roundcorners:first-child {
+    margin-left: 0;
+}
+
+.ready-to-work.formfooter  .message{
+    width:100%;
+    margin: 0;
+}
+
+.ready-to-work.formfooter  .message .roundcorners{
+
+}
+
+.ready-to-work.formfooter textarea {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width:100%;
+    height:130px;
+    font-size:14px;
+    padding: 12px 50px;
+}
+.ready-to-work.formfooter .stripes {
+    background: none;
+}
+.ready-to-work.formfooter .roundcorners {
+    float:none;
+    margin-top: 10px;
+}
+.ready-to-work.formfooter .roundcorners:first-child {
+    margin-top: 10px;
+}
+.ready-to-work.formfooter #quoteForm {
+    padding: 0;
+}
+.ready-to-work.formfooter .roundcorners .input-block {
+    padding: 0;
+}
+
+.ready-to-work.formfooter .form:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ready-to-work.formfooter .form > .roundcorners {
+
+}
+
+.roundcorners input {
+    width:180px;
+    padding: 0 50px;
+    height:40px;
+}
+
+.ready-to-work .roundcorners input {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.widthform .roundcorners {
+    margin: 0 15px 20px 15px;
+}
+.widthform .roundcorners input {
+    width:211px;
+    padding: 0 50px;
+    height:40px;
+}
+
+.ready-to-work.formfooter  .form:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ready-to-work.formfooter .form .roundcorners {
+    float: left;
+    width: 309px;
+    margin:15px 0 0 20px;
+}
+
+.ready-to-work.formfooter .form .roundcorners:first-child {
+    margin-left: 0;
+}
+
+.ready-to-work.formfooter  .message{
+    width:100%;
+    margin: 0;
+}
+
+.ready-to-work.formfooter  .message .roundcorners{
+
+}
+
+.ready-to-work.formfooter textarea {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width:100%;
+    height:130px;
+    font-size:14px;
+    padding: 12px 50px;
+}
+.ready-to-work.formfooter .stripes {
+    background: none;
+}
+.ready-to-work.formfooter .roundcorners {
+    float:none;
+    margin-top: 10px;
+}
+.ready-to-work.formfooter .roundcorners:first-child {
+    margin-top: 10px;
+}
+.ready-to-work.formfooter #quoteForm {
+    padding: 0;
+}
+.ready-to-work.formfooter .roundcorners .input-block {
+    padding: 0;
+}
+
+.ready-to-work.formfooter .form:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ready-to-work.formfooter .form > .roundcorners {
+
+}
+
+.roundcorners input {
+    width:180px;
+    padding: 0 50px;
+    height:40px;
+}
+
+.ready-to-work .roundcorners input {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.widthform .roundcorners {
+    margin: 0 15px 20px 15px;
+}
+.widthform .roundcorners input {
+    width:211px;
+    padding: 0 50px;
+    height:40px;
+}
+
+.ready-to-work.formfooter  .form:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ready-to-work.formfooter .form .roundcorners {
+    float: left;
+    width: 309px;
+    margin:15px 0 0 20px;
+}
+
+.ready-to-work.formfooter .form .roundcorners:first-child {
+    margin-left: 0;
+}
+
+.ready-to-work.formfooter  .message{
+    width:100%;
+    margin: 0;
+}
+
+.ready-to-work.formfooter  .message .roundcorners{
+
+}
+
+.ready-to-work.formfooter textarea {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width:100%;
+    height:130px;
+    font-size:14px;
+    padding: 12px 50px;
+}
+.ready-to-work.formfooter .stripes {
+    background: none;
+}
+.ready-to-work.formfooter .roundcorners {
+    float:none;
+    margin-top: 10px;
+}
+.ready-to-work.formfooter .roundcorners:first-child {
+    margin-top: 10px;
+}
+.ready-to-work.formfooter #quoteForm {
+    padding: 0;
+}
+.ready-to-work.formfooter .roundcorners .input-block {
+    padding: 0;
+}
+
+.ready-to-work.formfooter .form:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ready-to-work.formfooter .form > .roundcorners {
+
+}
+
+.roundcorners input {
+    width:180px;
+    padding: 0 50px;
+    height:40px;
+}
+
+.ready-to-work .roundcorners input {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.widthform .roundcorners {
+    margin: 0 15px 20px 15px;
+}
+.widthform .roundcorners input {
+    width:211px;
+    padding: 0 50px;
+    height:40px;
+}
+
+.ready-to-work.formfooter  .form:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ready-to-work.formfooter .form .roundcorners {
+    float: left;
+    width: 309px;
+    margin:15px 0 0 20px;
+}
+
+.ready-to-work.formfooter .form .roundcorners:first-child {
+    margin-left: 0;
+}
+
+.ready-to-work.formfooter  .message{
+    width:100%;
+    margin: 0;
+}
+
+.ready-to-work.formfooter  .message .roundcorners{
+
+}
+
+.ready-to-work.formfooter textarea {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width:100%;
+    height:130px;
+    font-size:14px;
+    padding: 12px 50px;
+}
+.ready-to-work.formfooter .stripes {
+    background: none;
+}
+.ready-to-work.formfooter .roundcorners {
+    float:none;
+    margin-top: 10px;
+}
+.ready-to-work.formfooter .roundcorners:first-child {
+    margin-top: 10px;
+}
+.ready-to-work.formfooter #quoteForm {
+    padding: 0;
+}
+.ready-to-work.formfooter .roundcorners .input-block {
+    padding: 0;
+}
+
+.ready-to-work.formfooter .form:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ready-to-work.formfooter .form > .roundcorners {
+
+}
+
+.roundcorners input {
+    width:180px;
+    padding: 0 50px;
+    height:40px;
+}
+
+.ready-to-work .roundcorners input {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.widthform .roundcorners {
+    margin: 0 15px 20px 15px;
+}
+.widthform .roundcorners input {
+    width:211px;
+    padding: 0 50px;
+    height:40px;
+}
+
+.ready-to-work.formfooter  .form:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ready-to-work.formfooter .form .roundcorners {
+    float: left;
+    width: 309px;
+    margin:15px 0 0 20px;
+}
+
+.ready-to-work.formfooter .form .roundcorners:first-child {
+    margin-left: 0;
+}
+
+.ready-to-work.formfooter  .message{
+    width:100%;
+    margin: 0;
+}
+
+.ready-to-work.formfooter  .message .roundcorners{
+
+}
+
+.ready-to-work.formfooter textarea {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width:100%;
+    height:130px;
+    font-size:14px;
+    padding: 12px 50px;
+}
+.ready-to-work.formfooter .stripes {
+    background: none;
+}
+.ready-to-work.formfooter .roundcorners {
+    float:none;
+    margin-top: 10px;
+}
+.ready-to-work.formfooter .roundcorners:first-child {
+    margin-top: 10px;
+}
+.ready-to-work.formfooter #quoteForm {
+    padding: 0;
+}
+.ready-to-work.formfooter .roundcorners .input-block {
+    padding: 0;
+}
+
+.ready-to-work.formfooter .form:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ready-to-work.formfooter .form > .roundcorners {
+
+}
+
+.roundcorners input {
+    width:180px;
+    padding: 0 50px;
+    height:40px;
+}
+
+.ready-to-work .roundcorners input {
+    width: 100%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.widthform .roundcorners {
+    margin: 0 15px 20px 15px;
+}
+.widthform .roundcorners input {
+    width:211px;
+    padding: 0 50px;
+    height:40px;
+}
+
+.ready-to-work.formfooter  .form:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.ready-to-work.formfooter .form .roundcorners {
+    float: left;
+    width: 309px;
+    margin:15px 0 0 20px;
+}
+
+.ready-to-work.formfooter .form .roundcorners:first-child {
+    margin-left: 0;
+}
+
+.ready-to-work.formfooter  .message{
+    width:100%;
+    margin: 0;
+}
+
+.ready-to-work.formfooter  .message .roundcorners{
+
+}
+
+.ready-to-work.formfooter textarea {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width:100%;
+    height:130px;
+    font-size:14px;
+    padding: 12px 50px;
+}
+.roundcorners {
+	border: 2px solid #dfe1e2;
+	margin: 26px 0 0;
+	float: left;
+	background:#fff;
+
+}
+
+.roundcorners input[type="text"],
+.roundcorners input[type="email"],
+.roundcorners textarea {
+    font: 14px Arial, Helvetica, sans-serif;
+    color: #9395a0;
+    border: 0 none;
+    border-radius: 1px;
+    margin: 0;
+    overflow:hidden;
+    display: block;
+    resize: none;
+    background-color:transparent;
+}
+
+.roundcorners  input[type="text"],
+.roundcorners  input[type="email"] {
+    font-size: 14px;
+	background: transparent url("/images/contact-icons.png") no-repeat 0 0;
+    height:40px;
+}
+
+	.roundcorners.name input {
+		background-position: 0 -269px;
+	}
+
+	.roundcorners.email input {
+		background-position: 0 -319px;
+	}
+
+	.roundcorners.phone input {
+		background-position: 0 -372px;
+	}
+
+	.roundcorners.company input {
+		background-position: 0 -423px;
+	}
+
+	/* Validation! */
+	.roundcorners.correct{border-color:#d2e6de;background:#fff url("/images/contact-icons.png") no-repeat 100% -520px !important;}
+		.roundcorners.correct input[type="text"],
+		.roundcorners.correct textarea,
+		.roundcorners.correct input[name="email"]
+		{border-color:#90dca9;}
+
+
+	.roundcorners.wrong{border-color:#e9dee1;}
+		.roundcorners.wrong input[type=text],
+		.roundcorners.wrong textarea,
+		.roundcorners.wrong input[name=email]
+		{color:#722a29;border-color:#d28181;}
+
+	.roundcorners.error{background-color:#ffbdbe;border-color:#e6dcde;}
+		.roundcorners.error input[type=text],
+		.roundcorners.error textarea,
+		.roundcorners.error input[name=email]
+		{color:#722a29;border-color:#d28181;}
+	.roundcorners.error textarea{background-color:#ffbdbe;}
+
+	.roundcorners.required {
+		background:#fff url("/images/required.png") no-repeat 100% -6px;
+	}
+
+		.roundcorners.required input:invalid{
+			-moz-box-shadow: none;
+			box-shadow: none;
+		}
