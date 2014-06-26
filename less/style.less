@@ -25,6 +25,16 @@ font-style:normal;
 }
 */
 @font-face {
+    font-family: 'PFHandbookProRegular';
+    src: url('../fonts/pfhandbookpro-regular-webfont.eot');
+    src: url('../fonts/pfhandbookpro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/pfhandbookpro-regular-webfont.woff') format('woff'),
+         url('../fonts/pfhandbookpro-regular-webfont.ttf') format('truetype'),
+         url('../fonts/pfhandbookpro-regular-webfont.svg#pf_handbook_proregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
 	font-family: 'RalewayHeavy';
 	src: url('../fonts/Raleway-Heavy.eot');
 	src: url('../fonts/Raleway-Heavy.eot?#iefix') format('embedded-opentype'),
@@ -2867,7 +2877,6 @@ section.main-page{
     margin-top:30px;
     .container{
         padding:0;
-        width:1100px;
         margin:0 auto;
     }
     .item{
@@ -2950,8 +2959,7 @@ section.main-page{
 
 #service{
     .container{
-        padding: 120px 130px 100px 130px;
-        max-width: 1100px;
+		padding: 0 5%;
     }
     h2{
         font-size:30px;
@@ -7260,6 +7268,27 @@ height:60px !important;
 			line-height: 1em;
 		}
 
+
+//carrier page
+
+.vacancies-title {
+  font-size: 30px;
+  line-height: 30px;
+  margin: 0 0 20px 0;
+  font-family: "helveticaneuecyrlight", Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  -webkit-margin-before: 0.83em;
+  -webkit-margin-after: 0.83em;
+  display: block;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  text-align: left;
+  color: #353535;
+  height: 100%;
+}
+
+
+
 .client-tables{
 }
 
@@ -7287,5 +7316,149 @@ height:60px !important;
 	.programs-list {
 		max-width: 434px;;
 		margin: 0 auto;
+	}
+}
+
+.our-advantages{
+	h1{
+		color: #00B8E4;
+	}
+
+	.benefit-icons {
+		background: url(http://images.netpeak.ua/career/benefits/sprite-icons.png) no-repeat top left;
+		display: inline-block;
+		height: 41px;
+		width: 41px;
+		margin-right: 10px;
+		vertical-align: middle;
+	}
+	.benefit-icon-1 {
+		background-position: 0 0;
+	}
+	.career-benefits .delimiter-circle {
+		background: url(http://images.netpeak.ua/career/benefits/circle.png) no-repeat;
+		height: 22px;
+		left: 50%;
+		margin-left: -11px;
+		position: absolute;
+		top: 66px;
+		width: 22px;
+		z-index: 5;
+	}
+	.row:before, .row:after {
+		content: " ";
+		display: table;
+	}
+	.row:before, .row:after {
+		content: " ";
+		display: table;
+	}
+	.career-benefits .row {
+		position: relative;
+		z-index: 6;
+	}
+	.row {
+		margin-left: -15px;
+		margin-right: -15px;
+		margin-bottom:0px;
+	}
+
+	.col-sm-6 {
+		width: 50%;
+	}
+	.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+		float: left;
+	}
+	.career-benefits .thumbnail {
+		background-color: #f4f4f4;
+		padding: 10px 20px;
+	}
+	.thumbnail {
+		display: block;
+		padding: 4px;
+		margin-bottom: 20px;
+		line-height: 1.428571429;
+		background-color: #ffffff;
+		border: 1px solid #dddddd;
+		border-radius: 4px;
+		-webkit-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+	}
+
+	.career-benefits h2 {
+		color: #000;
+		font-size: 24px;
+		margin-top: 8px;
+	}
+	h2, .h2 {
+		font-size: 60px;
+		line-height: 1;
+	}
+	h1, h2, h3 {
+		color: #00B8E4;
+	}
+	h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+		color: #00B8E4;
+		font-family: "pf_handbook_prothin";
+	}
+	h2, .h2 {
+		font-size: 30px;
+	}
+	h1, h2, h3 {
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+	h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+		font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+		font-weight: 500;
+		line-height: 1.1;
+		color: inherit;
+	}
+	.career-benefits p {
+		color: #868686;
+	}
+	p, ul, ol {
+		line-height: 1.6;
+	}
+	p {
+		margin: 0 0 10px;
+	}
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+position: relative;
+min-height: 1px;
+padding-left: 15px;
+padding-right: 15px;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+color: #00B8E4;
+font-family: "pf_handbook_prothin";
+}
+h2{
+	font-size:20px !important;
+	text-align:left !important;
+	text-transform:none !important;
+}
+.container{
+	width:auto;
+}
+.career-benefits .delimiter-line {
+border-right: 2px solid #F4F4F4;
+height: 100%;
+margin-left: -1px;
+top: 76px;
+left: 50%;
+position: absolute;
+}
+p{
+font-size: 14px;
+}
+h1{
+	text-align:center;
+}
+}
+
+.page-content{
+	.container{
+		width:auto;
 	}
 }
