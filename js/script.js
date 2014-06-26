@@ -1,4 +1,35 @@
 $(document).ready(function(){
+	$(".let-button").click(function(){
+		$(".dialog-box").show();
+		$(".dialog-overlay").show();
+	});
+	$(".dialog-overlay").click(function(){
+		$(".dialog-box").hide();
+		$(".dialog-overlay").hide();
+	});
+	$(".dialog-box .close").click(function(){
+		$(".dialog-box").hide();
+		$(".dialog-overlay").hide();
+	});
+	$(".steps-models li a").click(function(){
+		$(".steps-models li a.active").removeClass("active");
+		var cl = $(this).attr("class");
+		$(".steps-models li a").each(function(){
+			var cl = $(this).attr("class");
+			$("#"+cl).hide();
+		});
+
+		$(this).addClass("active");
+		$("#"+cl).show();
+	});
+
+	$(".howwework li a").click(function(){
+		$(".howwework li a.active").removeClass("active");
+		var n = $(".howwework li a").index($(this));
+		$("#how-we-wo .howw").hide();
+		$("#how-we-wo .howw").eq(n).show();
+		$(this).addClass("active");
+	});
 	$(".mobile-development-platforms .float-item").click(function(){
 		$(this).parent().find(".active").removeClass("active");
 		$(this).addClass("active");
@@ -545,7 +576,6 @@ $(document).ready(function(){
 		}
 	});
     $(".form .line input, .form .line .arrow").click(function(){
-    $(".form .line ul").hide();
         $(this).parent().find("ul").toggle();
         return false;
     });

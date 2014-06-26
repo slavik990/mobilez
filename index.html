@@ -10,8 +10,8 @@
     <!-- External CSS -->
 	<link rel="stylesheet/less" type="text/css" href="less/style.less"> 
     <!--<link rel="stylesheet" type="text/css" href="less/style.min.css">-->
-    <link rel="stylesheet" type="text/css" href="less/website.css">
     <link rel="stylesheet" type="text/css" href="less/scrollyeah.css">
+    <link rel="stylesheet" type="text/css" href="less/website.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
@@ -37,116 +37,91 @@
 	</script>
   </head>
   <body>
+    <div class="dialog-overlay">
+    </div>
     <section id="main-menu">
 
-	
-      <header id="header-top-section">
+	  <header id="header-section">
         <div class="inner">
-          <div class="top">
-
-			<div class="hide-on-mobile hide-on-tablet grid-20">
-              <h3 class="logo"><a href="/index.html"><span>THINK MOBILES</span></a></h3>
-			  			<div class="clear"></div>
-			</div>
-            <div class="right">
-              <span class="text">
-				call us: 38 (095) 567 67 29
-              </span>
-			  <a href="mailto:sales@thinkmobiles.com">sales@thinkmobiles.com</a>
-			  <div class="clear"></div>
-			</div>
-			<div class="clear"></div>
+          <div class="hide-on-mobile hide-on-tablet grid-20">
+            <h3 class="logo"><a href="/index.html"><span>THINK</span>MOBILES</a></h3>
           </div>
-          <div class="clear">
-          </div>
-		  <div class="bottom">
+          <nav id="ut-navigation" class="hide-on-mobile">
+            <a href="/services.html">How we work</a>
+            <a href="javascript:;">Services</a>
+			<!--              <a href="/testing.html" class="selected">Testing</a>-->
+            <a href="/portfolio.html">Projects</a>
+            <!--<a href="/partners.html">Partners</a>-->
+            <a href="/careers.html">Career</a>
+            <a href="/contactUs.html" class="without">Contact</a>
+            <a href="javascript:;" class="let-button"><span>Let's connect!</span></a>
+          </nav>
 
-			<nav class="hide-on-mobile ut-navigation">
-			  <a href="/services.html">How we work</a>
-			  <!--<a href="/testing.html">Testing</a>-->
-			  <a href="/portfolio.html">Projects</a>
-			  <a href="/mobile-dev.html">Mobile development</a>
-			  <!--<a href="/partners.html">Partners</a>-->
-			  <a href="/contactUs.html">Contact</a>
-			  <div class="stick_menu" style="display: block;">
-				<div class="front" style="display: block;"></div>
-				<div class="back" style="height: 310px; width: 185px; display: none;">
-				  <span><img src="i/connect_skype.png" width="183" height="309"></span>
-				  <div class="connectwith">
-					<a href="skype:+38(063)433-40-82?call"  class="Phone"></a>
-					<a href="skype:raven9peter?call" class="Skype"></a>
-					<a href="mailto:sales@mobilez365.com" class="Email"></a>
-				  </div>
-				</div>
-			  </div>
-			</nav>
-		  </div>
-        </div>
-		<div class="clear">
         </div>
       </header>
+      
 
 
       <div class="clear">
       </div>
-	  </section>
 	</section>
+</section>
 <section class="main-page">
-<div class="container">
+  <div class="container">
 	<h3>We build software</h3>
     <div class="text">Top software development company focusing on mobile</div>
     <div class="items">
-            <div class="item">
-        <a href="/startUP.html" class="inner">
+      <div class="item">
+        <a href="/startUP.html" class="inner first green">
           <h4>Start Up help</h4>
 		  Idea/requirements discussion<br/>
 		  MVP development<br/>
 		  Industry specific espertise<br/>
 		  Fast 1-2 weeks iterations<br/>
         </a>
-              </div>
-            <div class="item">
-        <a href="javascript:;" class="inner">
+      </div>
+      <div class="item">
+        <a href="javascript:;" class="inner blue">
           <h4>Software development</h4>
 		  Android<br/>
 		  iOS<br/>
 		  Windows Phone<br/>
 		  Unity3D, LibGDX engines<br/>
         </a>
-              </div>
+      </div>
 
-            <div class="item">
-        <a href="/backend.html" class="inner">
+      <div class="item">
+        <a href="/backend.html" class="inner last orange">
 		  <h4>Cloud &amp; Back-End</h4>
 		  Amazon WS, Azure<br/>
 		  Node.js, Socket.io<br/>
 		  Mongo, Postge, MySql<br/>
         </a>
-                  </div>
+      </div>
 
       <div class="clear">
-                </div>
+      </div>
 	  <div class="item">
-        <a href="javascript:;" class="inner">
+        <a href="javascript:;" class="inner first dark-blue">
 		  <h4>Enterprise</h4>
 		  CRM/ERP integrations<br/>
 		  Dashboard, rea-time data<br/>
 		  Mobile Point-Of-Sales<br/>
         </a>
-            </div>
+      </div>
 
 
-            <div class="item">
-        <a href="javascript:;" class="inner">
+      <div class="item">
+        <a href="javascript:;" class="inner salat">
 		  <h4>Front-end</h4>
 		  Angular.js<br/>
 		  BackBone.js<br/>
 		  HTML5/CSS<br/>
         </a>
-            </div>
+      </div>
 
 	  <div class="item">
-        <a href="/testing.html" class="inner">
+        <a href="/testing.html" class="inner last silver">
 		  <h4>Testing &amp; QA</h4>
 		  Functional<br/>
 		  Usability<br/>
@@ -154,10 +129,10 @@
 		  Load<br/>
 
         </a>
-        </div>
- 
-                  </div>
-                </div>
+      </div>
+	  
+    </div>
+  </div>
 </section>
 <!-- end of .main-menu-container -->
 <div class="clear">
@@ -169,21 +144,21 @@
 		<form id="solutionsform" action="" method="POST">
 		  <p class="dialog first">
             <span class="field">
-              <span class="inner">
-			  <input class="input-flat span5" type="text" name="problem" placeholder="How can we help?"/>
+              <span class="inner first">
+				<input class="input-flat span5" type="text" name="problem" placeholder="How can we help?"/>
               </span>
             </span>
             <span class="field">
-              <span class="inner">
+              <span class="inner center">
 
-			  <input class="input-flat span5" type="text" name="problem" placeholder="Email adress"/> 
-			</span>
+				<input class="input-flat span5" type="text" name="problem" placeholder="Email adress"/> 
+			  </span>
 			</span>
             <span class="field">
-              <span class="inner">
+              <span class="inner last">
 
-			<a id="js-problem-button" href="#" class="btn-flat">Let’s talk »</a>
-			</span>
+				<a id="js-problem-button" href="#" class="btn-flat">Let’s talk »</a>
+			  </span>
 			</span>
 		  </p>
 		  <input type="text" name="RefURL" style="display:none" value=""></form>
@@ -191,237 +166,480 @@
     </div>
   </div>
 </section>
+<div id="section3" class="home-team-outer">
+  <div class="home-team-inner">
+	<div class="scrollyeah scrollyeah_active scrollyeah_shadow scrollyeah_shadow_no-left" data-parallaxrate="-.3"><div class="scrollyeah__wrap" style="width: 999999px;"><div class="scrollyeah__shaft">
+		  <div class="blocks">
+			<div class="blocks-title">
+			  <span style="color: #2bb3ec;display: inline-block;padding-right: 10px">WHO</span><span>WE ARE</span><br>
+			  <span class="border"></span>
+			</div>
+			<div class="block-year">
+			 
+			  <div class="title year">
+ <span class="info-title">
+				Since
+			  </span>
+				<div class="millier"><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>0</span><span>1</span><span>2</span></div>
+				<div class="centaine"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>0</span></div>
+				<div class="dizaine"><span>1</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>0</span></div>
+				<div class="unite"><span>1</span><span>7</span><span>8</span><span>9</span><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span></div>
+			  </div>
+			</div>
+<!--			<div class="time">
+			  <span></span>
+			  <span class="line"></span>
+			</div>
+			<div class="b1 history">
+			  <a href="/contactUs.html" class="trigger activeLink">
+				<span>Contact Us</span>
+			  </a>
+			</div>-->
+			<div class="b1 career">
+			  <a href="javascript:;" class="trigger activeLink">
+				<span>Mobifaces</span>
+			  </a>
+			</div>
+			<div class="block-day">
+			  <div class="title day">
+				<div class="millier"><span>5</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>0</span><span>1</span><span>2</span></div>
+				<div class="unite"><span>5</span><span>7</span><span>8</span><span>9</span><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span></div>
+			  </div>
+			  <span class="info-title">
+				today our company<br>has a team of 55 people
+			  </span>
+			</div>
+			<div class="block-link">
+			  <a href="/about/" class="btn-submit-link activeLink">
+				<span>Research &amp; Development</span>
+			  </a><br>
+			  <a href="/about/" class="btn-submit-link activeLink">
+				<span>QA &amp; Testing</span>
+			  </a><br>
+			  <a href="/about/" class="btn-submit-link activeLink">
+				<span>Sales &amp Marketing</span>
+			  </a>
+			</div>
+<!--			<div class="b1 ukiefaces">
+			  <a href="javascript:;" class="trigger activeLink">
+				<span>career with us</span>
+			  </a>
+			</div>
+			<div class="b1 blog">
+			  <a href="http://www.linkedin.com/groups?home=&amp;gid=8107633&amp;trk=anet_ug_hm" class="trigger activeLink">
+				<span>Our Group on LinkedIn</span>
+			  </a>
+		  </div>-->
+			<div class="b1 trend">
+			  <a href="/services.html" class="trigger activeLink">
+				<span>How we work</span>
+			  </a>
+			</div>
+			<div class="office">OFFICE</div>
+			<div class="location">
+			  <div class="location-city">Uzhhgorod, Ukraine</div><br>
+			</div>
+<!--			<div class="skills">SKILLS</div>
+			<div class="sciens">Objective-C, Java, JS, NOSQL</div>
+			<div class="mini_brain anim"></div>-->
+
+		  </div>
+  </div>
+</div>
+
+
+
+
+<div id="content">
+  <nav></nav>
+
+
+</div>
+
+
+
+</div></div></div>
+
+
+<!--	  <article class="main howwork">
+        <div class="wrap">
+          <div class="breakout">
+			<div class="blocks-title">
+			  <span style="color: #d96e78;">HOW </span><span>WE WORK</span><br>
+			  <span class="border"></span>
+			</div>
+            <p>
+            </p>
+          </div>
+          <section>
+            <img src="i/idea.png" alt="idea">
+
+			
+          </section>
+
+        </div>
+        <div class="someheight"></div>
+      </article>
 
 <section id="testing">
-    <div class="partner-carusel">
-        <div class="container">
-            <div class="inner">
-                <a class="prev" href="javascript:;">
-                </a>
-                <div class="portfolio-slider">
-                    <div class="wrapper-slider swiper-wrapper">
-                  <span class="item swiper-slide">
-                    <img src="i/desktop/testing-slider/bodrum.png" class="bodrum">
-                    <img src="i/desktop/testing-slider/bodrum-color.png" class="bodrum color">
-                  </span>
-                  <span class="item swiper-slide">
-                    <img src="i/desktop/testing-slider/powermat.png" class="powermat">
-                    <img src="i/desktop/testing-slider/powermat-color.png" class="powermat color">
-                  </span>
-                  <span class="item swiper-slide">
-                    <img src="i/desktop/testing-slider/ken-ken.png"  class="ken-ken">
-                    <img src="i/desktop/testing-slider/ken-ken-color.png"  class="ken-ken color">
-                  </span>
-                  <span class="item swiper-slide">
-                    <img src="i/desktop/testing-slider/puzzleface.png"  class="puzzleface">
-                    <img src="i/desktop/testing-slider/puzzleface-color.png"  class="puzzleface color">
-                  </span>
-                  <span class="item swiper-slide">
-                    <img src="i/desktop/testing-slider/newdesk.png" class="newdesk">
-                    <img src="i/desktop/testing-slider/newdesk-color.png" class="newdesk color">
-                  </span>
-                  <span class="item swiper-slide">
-                    <img src="i/desktop/testing-slider/huntpreditor.png"  class="hunt">
-                    <img src="i/desktop/testing-slider/huntpreditor-color.png"  class="hunt color">
-                  </span>
-                  <span class="item swiper-slide">
-                    <img src="i/desktop/testing-slider/fishpreditor.png"  class="fish">
-                    <img src="i/desktop/testing-slider/fishpreditor-color.png"  class="fish color">
-                  </span>
-                    </div>
-                </div>
-                <a class="next"  href="javascript:;">
-                </a>
-            </div>
-            <div class="navigation-slide">
-            </div>
-        </div>
-    </div>
-</section>
-
-    <div id="content">
-        <nav></nav>
-
-        <section id="our-team">
-            <div class="container partners-section">
-                <div class="header">
-                    <h2>What our clients say</h2>
-                </div>
-                <div class="clients-say">
-                    <div class="item lf">
-
-
-                        <div class="inner" style="height: auto;">
-                            <div class="top">
-                                <span>POA-MEDIA</span>
-                                <div class="clients-img ido"></div>
-                            </div>
-                            <div class="right">
-                                <span class="text">We collaborate on many projects with Mobilez365 more than a year. By keeping the partnership, we find this company as a dynamic, growing, innovative and reliable team of highly experienced, creative and hardworking developers, QAs and designers. Our plans includes the further teamwork in future.</span>
-                                <h3>Mobile Apps Project Manager</h3>
-                            </div>
-                            <div class="clear">
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="item rt">
-                        <div class="inner" style="height: auto;">
-                            <div class="top">
-                                <span>Kenlo Group</span>
-                                <div class="clients-img"></div>
-                            </div>
-                            <div class="right">
-                                <span class="text">The company provides a high-quality, well-coordinated work on developing the well-done and creative applications for mobile phones and table PCs. Mobilez365 services is the best recommendation for those who look for a rapid and qualified team for developing mobile applications.</span>
-                                <h3>Igor Goldenberg, CEO</h3>
-
-                            </div>
-                            <div class="clear">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="clear"></div>
-                    <div class="item lf mgtop">
-                        <div class="inner" style="height: auto;">
-                            <div class="top">
-                                <span>Nexttoy</span>
-                                <div class="clients-img"></div>
-                            </div>
-                            <div class="right">
-              <span class="text">
-                I have been looking for a collaboration with the company like Mobilez365 for a long time. Young and at the same time experienced and talented people who develop fast and qualitatively. The work we have done was interesting and enjoying.
+  <div class="partner-carusel">
+    <div class="container">
+      <div class="inner">
+        <div class="portfolio">
+          <div class="wrapper-slider swiper-wrapper">
+            <div class="top">
+              <span class="item swiper-slide">
+				<img src="i/desktop/testing-slider/powermat-color.png" class="powermat color">
               </span>
-                                <h3>Nikki Yoshimura, Independent Consultant</h3>
-                            </div>
-                            <div class="clear">
-                            </div>
-                        </div>
-                    </div>
+			  <span class="item swiper-slide">
+				<img src="i/desktop/testing-slider/huntpreditor-color.png"  class="hunt color mg2">
+              </span>
+			  <span class="item swiper-slide">
+				<img src="i/desktop/testing-slider/fishpreditor-color.png"  class="fish color mg2">
+              </span>
+			  <span class="item swiper-slide">
+				<img src="i/desktop/testing-slider/puzzleface-color.png"  class="puzzleface color">
+              </span>
+            </div>
+            <div class="bottom">
+              <span class="item swiper-slide">
+				<img src="i/desktop/testing-slider/bodrum-color.png" class="bodrum color">
+              </span>
+              <span class="item swiper-slide">
+				<img src="i/desktop/testing-slider/newdesk-color.png" class="newdesk color">
+              </span>
+			  <span class="item swiper-slide">
+				<img src="i/desktop/testing-slider/ken-ken-color.png"  class="ken-ken color">
+              </span>
+			  
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="navigation-slide">
+      </div>
+    </div>
+  </div>
+</section>-->
+<!--<section class="ready-to-work formfooter ">
+  <div class="wrap">
+    <h2 class="light">Ready to take the <strong>next step</strong>?</h2>
+    <p>Feel free to send over a request by filling out our quote form.</p>
+    
 
 
-                    <div class="item rt mgtop">
-                        <div class="inner" style="height: auto;">
-                            <div class="top">
-                                <span>Ocean Labs</span>
-                                <div class="clients-img"></div>
-                            </div>
-                            <div class="right">
-                                <span class="text">I found the partnership with Mobilez365 very awesome. The company has got affordable pricing, trustworthy team with a fantastic support. That’s why I chose these guys and got the successful results.</span>
-                                <h3>Fionn Concannon, CEO</h3>
-                            </div>
-                            <div class="clear">
-                            </div>
-                        </div>
-                    </div>
+    <form method="post" action="" class="lcf stripes" enctype="multipart/form-data" id="quoteForm1" data-disable-on-uploading="">
+
+      <section class="form">
+
+        <div class="roundcorners name">
+          <div class="input-block">
+            <input name="fullname" type="text" placeholder="Full name" required="required" class="enterIndex">
+          </div>
+
+        </div>
+        <div class="roundcorners email">
+          <div class="input-block">
+            <input name="email" type="text" placeholder="Email" required="required" class="enterIndex">
+          </div>
+
+        </div>
+
+        <div class="roundcorners phone">
+          <div class="input-block">
+            <input name="phone" type="text" placeholder="Phone" class="enterIndex">
+          </div>
+
+        </div>
+
+      </section>
+      <aside class="message">
+        <div class="roundcorners textarea">
+          <textarea rows="8" cols="10" placeholder="Description" required="required" name="message" class="enterIndex"></textarea>
+
+        </div>
+        <div class="attachments" data-attachmens=""><ul class="qq-upload-list qq-offset-0"></ul><div class="qq-uploader"><div class="qq-upload-drop-area" style="display: none;"><span>Drag a file here, or click </span><p class="btn" style="position: relative; overflow: hidden; direction: ltr;"><span>browse</span><input multiple="multiple" type="file" name="file" style="position: absolute; right: 0px; top: 0px; font-family: Arial; font-size: 118px; margin: 0px; padding: 0px; cursor: pointer; opacity: 0;"></p></div></div></div>
+      </aside>
+      <p>
+        <label class="is-checkbox is-checkbox-nda">
+          <input type="checkbox" name="checkthis" value="1" class="enterIndex"><span class="label">Yes, send me a Mutual NDA (Non-Disclosure Agreement)</span>
+        </label>
+      </p>
+
+      <button class="is-btn is-btn-big is-btn-purple is-btn-submit">Send message</button>
+      <input type="hidden" name="_lcf_id" value="contacts" class="enterIndex">
+      <input type="hidden" name="country" value="us" class="enterIndex">
+      <input type="hidden" name="refferer" value="/smb.html" class="enterIndex">
+      <input type="hidden" name="utmccn" value="(direct)" class="enterIndex">
+      <input type="hidden" name="utmcmd" value="(none)" class="enterIndex">
+      <input type="hidden" name="utmgclid" value="" class="enterIndex">
+      <input type="hidden" name="utmcsr" value="(direct)" class="enterIndex">
+      <input type="hidden" name="utmctr" value="" class="enterIndex">
+      <input type="hidden" name="country_code" value="UA" class="enterIndex">
+      <input type="hidden" name="lead_source" value="Website Query" class="enterIndex">
+
+    </form>
+  </div>
+</section>-->
+<div class="container">
+<div class="col-lg-4 pull-right form_area_new without-contact">
+  <div class="close">
+  </div>
+	
+	<h1>Quick contact</h1>
+    <h2>We will contact you right away</h2>
+    
+	
+	<span id="form_msg_quote"></span>
+	<form id="contact_us_form_quote" role="form" action="index.php" method="post">                      
+	  
+	  
+      
+	  <div class="form-group row">
+		
+		<div class="col-lg-6 first">
+          <span class="name error_message"></span>	
+		  <input type="text" name="name" class="form-control myform2" id="name" placeholder="YOUR NAME">
+		</div>
+		
+		<div class="col-lg-6 last">
+          <span class="email error_message"></span>		
+		  <input type="text" name="email" class="form-control myform2" id="email" placeholder="YOUR EMAIL">
+		</div>
+		
+	  </div>
+	  
+	  <div class="form-group">
+		
+		<div class="row"><div class="col-lg-6 first">	
+            <span class="telephone error_message"></span>	
+			<input type="text" name="telephone" class="form-control myform2" id="telephone" placeholder="YOUR PHONE NUMBER">
+		  </div>
+		  
+		  <div class="col-lg-6 last">
+            <span class="company error_message"></span>		
+			<input type="text" name="company" class="form-control myform2" id="company" placeholder="YOUR COMPANY NAME">
+		  </div>
+		  
+		</div>
+		
+		
+		
+
+        <span class="message error_message1"></span>
+        <input type="hidden" name="is_submit" value="1" id="is_submit">
+        
+        <input type="hidden" name="form_name" value="Sliding Contact Us" id="form_name">
+        
+	  </div>	
+	  
+	  <div class="text-wrapper">
+		<textarea name="message" class="form-control myform2" id="message" rows="3" placeholder="YOUR MESSAGE"></textarea>
+        <input type="button" value="SEND" id="submit_1" name="submit" class="btn btn-default btn_sub2 col-lg-12">
+	  </div>
+	  
+
+      
+      <h4>Call Us On <b>877-289-0401</b></h4>
+
+	  
+	</form>
+
+  </div>
+
+
+<div class="dialog-box">
+  <div class="col-lg-4 pull-right form_area_new">
+  <div class="close">
+  </div>
+	
+	<h1>Quick contact</h1>
+    <h2>We will contact you right away</h2>
+    
+	
+	<span id="form_msg_quote"></span>
+	<form id="contact_us_form_quote" role="form" action="index.php" method="post">                      
+	  
+	  
+      
+	  <div class="form-group row">
+		
+		<div class="col-lg-6 first">
+          <span class="name error_message"></span>	
+		  <input type="text" name="name" class="form-control myform2" id="name" placeholder="YOUR NAME">
+		</div>
+		
+		<div class="col-lg-6 last">
+          <span class="email error_message"></span>		
+		  <input type="text" name="email" class="form-control myform2" id="email" placeholder="YOUR EMAIL">
+		</div>
+		
+	  </div>
+	  
+	  <div class="form-group">
+		
+		<div class="row"><div class="col-lg-6 first">	
+            <span class="telephone error_message"></span>	
+			<input type="text" name="telephone" class="form-control myform2" id="telephone" placeholder="YOUR PHONE NUMBER">
+		  </div>
+		  
+		  <div class="col-lg-6 last">
+            <span class="company error_message"></span>		
+			<input type="text" name="company" class="form-control myform2" id="company" placeholder="YOUR COMPANY NAME">
+		  </div>
+		  
+		</div>
+		
+		
+		
+
+        <span class="message error_message1"></span>
+        <input type="hidden" name="is_submit" value="1" id="is_submit">
+        
+        <input type="hidden" name="form_name" value="Sliding Contact Us" id="form_name">
+        
+	  </div>	
+	  
+	  <div class="text-wrapper">
+		<textarea name="message" class="form-control myform2" id="message" rows="3" placeholder="YOUR MESSAGE"></textarea>
+        <input type="button" value="SEND" id="submit_1" name="submit" class="btn btn-default btn_sub2 col-lg-12">
+	  </div>
+	  
+
+      
+      <h4>Call Us On <b>877-289-0401</b></h4>
+
+	  
+	</form>
+
+  </div>
+</div>
+</div></div></div>
+<section class="">
+  <div class="container">
+   <ul class="programs-list clearChlds">
+        <li>
+            <img class="cover" src="i/icons/bodrum_life.png" alt="">
+            <p>
+                <strong>Alfa-Bank</strong>
+                <em>for iOS, Android,<br>Windows Phone &amp;<br> Samsung bada</em>
+            </p>
+            <div class="hover">
+                <div>
+                    <a class="btn app-store" href="http://itunes.apple.com/ru/app/al-fa-bank/id353127685?mt=8" title="Available on the App Store">
+                        <img class="normal" src="i/app_store.png" alt="App Store">
+                        <img class="active" src="i/app_store_active.png" alt="App Store">
+                    </a>
+                    <a class="btn google-play" href="https://play.google.com/store/apps/details?id=ru.alfabank.mobile.android" title="Get it on Google Play">
+                        <img class="normal" src="i/google_play.png" alt="Google Play">
+                        <img class="active" src="i/google_play_active.png" alt="Google Play">
+                    </a>
+                    <a class="btn windows-store" href="http://www.windowsphone.com/en-us/store/app/альфа-банк/81b806cf-841a-4aef-81a9-2d614c9aef92" title="Download from Windows Store">
+                        <img class="normal" src="i/windows_store.png" alt="Windows Store">
+                        <img class="active" src="i/windows_store_active.png" alt="Windows Store">
+                    </a>
                 </div>
             </div>
-        </section>
-    </div>
+        </li>
 
-<section class="ready-to-work formfooter ">
-    <div class="wrap">
-                    <h2 class="light">Ready to take the <strong>next step</strong>?</h2>
-            <p>Feel free to send over a request by filling out our quote form.</p>
-        
-
-
-        <form method="post" action="" class="lcf stripes" enctype="multipart/form-data" id="quoteForm1" data-disable-on-uploading="">
-
-            <section class="form">
-
-                <div class="roundcorners name">
-                    <div class="input-block">
-                        <input name="fullname" type="text" data-placeholder="Full name" required="required" value="Full name" class="enterIndex">
-                    </div>
-
-                </div>
-                <div class="roundcorners email">
-                    <div class="input-block">
-                        <input name="email" type="text" data-placeholder="Email" required="required" value="Email" class="enterIndex">
-                    </div>
-
-                </div>
-
-                <div class="roundcorners phone">
-                    <div class="input-block">
-                        <input name="phone" type="text" data-placeholder="Phone" value="Phone" class="enterIndex">
-                    </div>
-
-                </div>
-
-            </section>
-            <aside class="message">
-                <div class="roundcorners textarea">
-                    <textarea rows="8" cols="10" data-placeholder="Description" required="required" name="message" class="enterIndex">Description</textarea>
-
-                </div>
-                <div class="attachments" data-attachmens=""><ul class="qq-upload-list qq-offset-0"></ul><div class="qq-uploader"><div class="qq-upload-drop-area" style="display: none;"><span>Drag a file here, or click </span><p class="btn" style="position: relative; overflow: hidden; direction: ltr;"><span>browse</span><input multiple="multiple" type="file" name="file" style="position: absolute; right: 0px; top: 0px; font-family: Arial; font-size: 118px; margin: 0px; padding: 0px; cursor: pointer; opacity: 0;"></p></div></div></div>
-            </aside>
+        <li>
+            <img class="cover" src="../images/products/2Do.jpg" alt="">
             <p>
-                <label class="is-checkbox is-checkbox-nda">
-                    <input type="checkbox" name="checkthis" value="1" class="enterIndex"><span class="label">Yes, send me a Mutual NDA (Non-Disclosure Agreement)</span>
-                </label>
+                <strong>2Do</strong>
+                <em>for Android</em>
             </p>
+            <div class="hover">
+                <div>
+                    <a class="btn google-play" href="https://play.google.com/store/apps/details?id=com.guidedways.android2do" title="Get it on Google Play">
+                        <img class="normal" src="../images/buttons/en/google_play.png" alt="Google Play">
+                        <img class="active" src="../images/buttons/en/google_play_active.png" alt="Google Play">
+                    </a>
+                </div>
+            </div>
+        </li>
 
-            <button class="is-btn is-btn-big is-btn-purple is-btn-submit">Send message</button>
-            <input type="hidden" name="_lcf_id" value="contacts" class="enterIndex">
-            <input type="hidden" name="country" value="us" class="enterIndex">
-            <input type="hidden" name="refferer" value="/smb.html" class="enterIndex">
-            <input type="hidden" name="utmccn" value="(direct)" class="enterIndex">
-            <input type="hidden" name="utmcmd" value="(none)" class="enterIndex">
-            <input type="hidden" name="utmgclid" value="" class="enterIndex">
-            <input type="hidden" name="utmcsr" value="(direct)" class="enterIndex">
-            <input type="hidden" name="utmctr" value="" class="enterIndex">
-            <input type="hidden" name="country_code" value="UA" class="enterIndex">
-            <input type="hidden" name="lead_source" value="Website Query" class="enterIndex">
+        <li>
+            <img class="cover" src="../images/products/advizzer.jpg" alt="">
+            <p>
+                <strong>Advizzer</strong>
+                <em>for iOS</em>
+            </p>
+            <div class="hover">
+                <div>
+                    <a class="btn app-store" href="http://itunes.apple.com/ru/app/advizzer/id560544611?mt=8" title="Available on the App Store">
+                        <img class="normal" src="../images/buttons/en/app_store.png" alt="App Store">
+                        <img class="active" src="../images/buttons/en/app_store_active.png" alt="App Store">
+                    </a>
+                </div>
+            </div>
+        </li>
 
-        </form>
-    </div>
+    </ul>
+  </div>
 </section>
 
-    <footer class="footer">
-        <div class="grid-container">
-            <div class="grid-25 tablet-grid-100">
-                <h3>Mobilez365</h3>
-                <span class="copyright">All Rights Reserved. © 2013</span>
-            </div>
-            <!-- social network -->
-            <div class="grid-25 middle">
-                <dl>
-                    <dt>&nbsp;</dt>
-                    <dd> <h4>Contact info:</h4></dd>
-                    <dt>&nbsp;</dt>
-                    <dd><p><a class="mail-link" href="mailto:sales@mobilez365.com"> sales@mobilez365.com</a></p></dd>
-                    <dt>&nbsp;</dt>
-                    <dd>
-                        <p>+38 063 433 40 82</p>
-                    </dd>
-                </dl>
-            </div>
-            <div class="grid-25 middle">
-                <dl>
-                    <dt>&nbsp;</dt>
-                    <dd>
-                        <h4>Location:</h4>
-                    </dd>
-                    <dt>&nbsp;</dt>
-                    <dd>
-                        <p> 47, Shandora Petefi sq.</p>
-                    </dd>
-                    <dt>&nbsp;</dt>
-                    <dd>
-                        <p>88000, Uzhhorod</p>
-                    </dd>
-                    <dt>&nbsp;</dt>
-                    <dd>
-                        <p>Ukraine</p>
-                    </dd>
-                </dl>
-            </div>
-            <div class="social grid-25  tablet-grid-100">
- <section class="downloads">
+
+<div class="clear">
+</div>
+<footer class="footer">
+  <div class="grid-container">
+    <div class="grid-25 tablet-grid-100 social">
+      <h3>THINKMOBILES</h3>
+      <span class="copyright">All Rights Reserved. © 2013</span>
+	  <ul class="social-network">
+        <li class="linked-in">
+          <a class="social-link" href="http://www.linkedin.com/groups?home=&amp;gid=8107633&amp;trk=anet_ug_hm" target="_blank" style="opacity: 1;" rel="nofollow">
+            <span class="social-icon-m"><img alt="uzhgorod" src="i/desktop/social/linkedin_logo_white.png"></span>
+          </a>
+        </li>
+        <li class="google-plus">
+          <a class="social-link" href="https://plus.google.com/u/0/117317617493563414171/posts" target="_blank" style="opacity: 1;" rel="nofollow">
+            <span class="social-icon-m" style="border-width: 2px; padding-top: 0px;"><img alt="uzhgorod" src="i/desktop/social/googleplus_logo_white.png"></span>
+          </a>
+        </li>
+        <li class="facebook">
+          <a class="social-link" href="https://www.facebook.com/Mobilez365" target="_blank" style="opacity: 1;" rel="nofollow">
+            <span class="social-icon-m" style="border-width: 2px; padding-top: 0px;"><img alt="uzhgorod" src="i/desktop/social/FB_fLogo_white.png"></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- social network -->
+    <div class="grid-25 middle">
+      <dl>
+        <dt>&nbsp;</dt>
+        <dd> <h4>Contact info:</h4></dd>
+        <dt>&nbsp;</dt>
+        <dd><p><a class="mail-link" href="mailto:sales@mobilez365.com"> sales@mobilez365.com</a></p></dd>
+        <dt>&nbsp;</dt>
+        <dd>
+          <p>+38 063 433 40 82</p>
+        </dd>
+      </dl>
+    </div>
+    <div class="grid-25 middle">
+      <dl>
+        <dt>&nbsp;</dt>
+        <dd>
+          <h4>Location:</h4>
+        </dd>
+        <dt>&nbsp;</dt>
+        <dd>
+          <p> 47, Shandora Petefi sq.</p>
+        </dd>
+        <dt>&nbsp;</dt>
+        <dd>
+          <p>88000, Uzhhorod</p>
+        </dd>
+        <dt>&nbsp;</dt>
+        <dd>
+          <p>Ukraine</p>
+        </dd>
+      </dl>
+    </div>
+    <div class="social grid-25  tablet-grid-100">
+	  <section class="downloads">
 
         <ul>
           <li>
@@ -430,42 +648,26 @@
               PDF, 5 MB
             </a>
           </li>
-          <li>
-            <a target="_blank" href="pdf/portfolio.pdf">
-              <span>PORTFOLIO</span>
-              PDF, 15 MB
-            </a>
-          </li>
+		  <!--          <li>
+						<a target="_blank" href="pdf/portfolio.pdf">
+						  <span>PORTFOLIO</span>
+						  PDF, 15 MB
+						</a>
+          </li>-->
         </ul>
 
 
       </section>
-                <ul class="social-network">
-                    <li class="twitter">
-                        <a class="social-link" href="http://www.linkedin.com/groups?home=&amp;gid=8107633&amp;trk=anet_ug_hm" target="_blank" style="opacity: 1;">
-                            <span class="social-icon-m" style="border-width: 2px; padding-top: 0px;"><i class="icon-twitter" style="margin-top: 12px; background-size: 80%; background-position: 2px -47px;"></i></span>
-                        </a>
-          </li>
-                    <li class="google-plus">
-                        <a class="social-link" href="https://plus.google.com/u/0/117317617493563414171/posts" target="_blank" style="opacity: 1;">
-                            <span class="social-icon-m"><i class="icon-google-plus"></i></span>
-                        </a>
-          </li>
-                    <li class="facebook">
-                        <a class="social-link" href="https://www.facebook.com/Mobilez365" target="_blank" style="opacity: 1;">
-                            <span class="social-icon-m"><i class="icon-facebook"></i></span>
-                        </a>
-          </li>
-        </ul>
-	 
-            </div>
-        </div><!-- close container -->
-        <div class="clearfix">
-        </div>
-      </footer>
-      <!-- end of footer -->
 
-  </body>
+	  
+    </div>
+  </div><!-- close container -->
+  <div class="clearfix">
+  </div>
+</footer>
+<!-- end of footer -->
+
+</body>
 </html> 
 
 
