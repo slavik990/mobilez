@@ -1,23 +1,3 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video, input,block,br {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
 
 .main_content{
     width:100%;
@@ -29,20 +9,33 @@ time, mark, audio, video, input,block,br {
 
 .white_background{
     background-color:#FFFFFF;
-    margin-top:55px;
+    padding-top:55px;
     margin-bottom: 40px;
+
+}
+.white_background .choose-contacts{
+	height:52px;
+}
+.white_background .choose-contacts ul{
+	list-style:none;
+}
+.white_background .choose-contacts ul li a{
+	height:39px;
+}
+.white_background .choose-contacts ul li a:hover{
+	text-decoration: none !important;
+	border-bottom: 1px solid #2bb3ec;
+	padding-bottom: 0px;
+}
+.white_background .choose-contacts ul li a.active{
+	color:#777;
+	border-bottom: 1px solid white;
 }
 .icon {text-align:center;padding:10px 0;}
 .tc{text-align:center;}
 .fullwidth{width:96%;padding:0 2%;}
 .section_divider{width:100%; border: 1px solid #CCC; margin:20px 0;}
 
-.sub_heading h6{font-size:17px;}
-.sub_heading h3{font-size:28px;}
-.sub_heading {font-size:22px;color:#414042;padding:15px 0;}
-/*.sub_heading {font-size:18px;color:#414042;padding:15px 0;}*/
-.sub_heading h3{font-size:20px; color:#414042; font-weight:bold;}
-.sub_heading_2 {font-size:18px;color:#414042;padding:15px 0;}
 
 .cloud_endpoint{width:100%; margin:0 auto;}
 .cloud_endpoint img{width:65%;}
@@ -55,19 +48,9 @@ time, mark, audio, video, input,block,br {
 clearfix {position:relative;zoom:1;display:block;}
 .clearfix:after {clear:both;visibility:hidden;content:".";font-size:0;line-height:0;display:block;}
 
-h2 {font:bold italic 26px/24px Calibri, arial;background:#58595B;color:#fff;text-align:center;padding:10px 0; margin:20px 0;}
-h2 span {font-weight:400;font-style:normal;display:block;}
-p{margin:5px 0;}
+h2 {font:bold italic 26px/24px helveticaneuecyrlight, arial;background:#58595B;color:#fff;text-align:center;padding:10px 0; margin:20px 0;}
+h2 span {font-weight:400;font-style:normal;display:block;font-size:20px;
+ line-height:30px;}
+p{margin:5px 0;font-size:20px;
+ line-height:30px;}
 li{list-style-type: none}
-body {
-    line-height: 1;
-    background-color:#dedbcc;
-    color:#58595B;
-    font:normal 16px/22px Calibri,Helvetica,Arial,sans-serif!important;
-    /*font:normal 14px/20px liberation_sansregular, arial!important;*/
-    text-align:left;
-    -webkit-text-size-adjust: none;
-    margin-top:-10px;
-    padding-top:0px;
-}
-

@@ -78,7 +78,7 @@ $(document).ready(function(){
 
         ctx.restore();*/ // restore clipping region to default
     }
-    var inter=setInterval(my2,30);
+//    var inter=setInterval(my2,30);
 
  
 });

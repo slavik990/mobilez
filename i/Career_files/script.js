@@ -20,9 +20,9 @@ $(document).ready(function(){
 			i.arc(t,n,f,u,r,e),
 			s.strokeStyle="#4cb743",
 			s.lineWidth=30,s.stroke(),
-			h.strokeStyle="#4292be",
+			h.strokeStyle="#113a68",
 			h.lineWidth=30,h.stroke(),
-			o.strokeStyle="#ff6801",
+			o.strokeStyle="#4292be",
 			o.lineWidth=30,o.stroke(),
 			i.strokeStyle="#0e559e",
 			i.lineWidth=30,
@@ -37,10 +37,10 @@ $(document).ready(function(){
 		$("#how-we-wo .howw").eq(n).show();
 		$(".howwework li a").eq(n).addClass("active");
 	}
-/*	$(".let-button").click(function(){
+	$(".let-button").click(function(){
 		$(".dialog-box").show();
 		$(".dialog-overlay").show();
-	});*/
+	});
 	$("#load-more-benefits").click(function(){
 		$(".not-viz").show(100);
 		$(this).hide();
@@ -193,7 +193,7 @@ $(document).ready(function(){
             pag: {
                 paginationElement:'span',
                 paginationVisibleClass:'',
-                paginationClickable:true
+                paginationClickable:true,
 
             }
         };
@@ -333,7 +333,7 @@ $(document).ready(function(){
             if(!regEmail.test(email)){
                var emailError = $('div.inTouch').find('ul.formErrors li').eq(0);
                   emailError.show();
-                  email.focus();
+                  email.focus;
             }
             if (massage == ""){
                 var emailError = $('div.inTouch').find('ul.formErrors li').eq(1);
