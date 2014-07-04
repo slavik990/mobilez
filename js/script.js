@@ -656,7 +656,11 @@ $(document).ready(function(){
 		}
 	});
     $(".form .line input, .form .line .arrow").click(function(){
-        $(this).parent().find("ul").toggle();
+        var b = $(this).parent().find("ul").is(":visible");
+		if (!b) {
+			$(this).parents('.form').find("ul").hide();
+		}
+		$(this).parent().find("ul").toggle();
         return false;
     });
     $(document).click(function(){
