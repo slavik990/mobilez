@@ -2499,6 +2499,7 @@ section.main-page{
                 }
                 input{
                     border:1px solid silver;
+					border-right: none;
 					font-family: "helveticaneuecyrlight", Arial, Helvetica, sans-serif;
                     float:right;
                     height:40px;
@@ -2517,6 +2518,9 @@ section.main-page{
                     padding-left:5px;
 
                 }
+				input[name='email'] {
+					border:1px solid silver;		
+				}
                 .inner{
                     position: relative;
                     float:right;
@@ -2525,7 +2529,8 @@ section.main-page{
                     .arrow{
                         cursor:pointer;
                         background: #777;
-                        border:1px solid #D1D3C7;
+                        /*border:1px solid #D1D3C7;*/
+						border:1px solid silver;
                         width:40px;
                         height:40px;
 						outline: none;
