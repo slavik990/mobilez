@@ -371,6 +371,25 @@ $(document).ready(function(){
         }
     });
 
+    $("#contact_us_form_quote #submit_1").click(function(){
+        var form = $(this).parents("#contact_us_form_quote");
+        var email = form.find('input[name="email"]').val();
+        var regEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        var emailError = form.find('.error');
+
+        if (!regEmail.test(email)) {
+            emailError.show();
+            return false;
+        }
+        else {
+            emailError.hide();
+            $.post("quickContact.php", form.serialize(),  function(data) {
+                _gaq.push(['_trackEvent', "Client Quick Contact", "Email", "Email"]);
+                form.find('.success').html('The Message sent!');
+                form.find('.success').hide(2000);
+            });
+        }
+    });
 
    $(".itform .send").click(function(){
         var form = $(this).parents(".itform");
