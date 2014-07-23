@@ -25,12 +25,110 @@
 	  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	  })();
 	</script>
+    <script>
+        function ShowDetal(id) {
+            var element = document.getElementById(id);
+
+            var x=screen.width;
+            var y=screen.height;
+            var w=element.offsetWidth;
+            var h=element.offsetHeight;
+            var left = ((x-w)/2);
+                left = left+'px';
+            var top = 20+'px';
+            document.getElementById(id).style.top = top;
+            document.getElementById(id).style.left = left;
+            document.getElementById('details').style.visibility = 'visible';
+            document.getElementById(id).style.visibility = 'visible';
+        }
+        function hideDetal() {
+            document.getElementById('details').style.visibility = 'hidden';
+            document.getElementById('detal_1').style.visibility = 'hidden';
+            document.getElementById('detal_2').style.visibility = 'hidden';
+            document.getElementById('detal_3').style.visibility = 'hidden';
+        }
+    </script>
   </head>
   <body>
+      <div id="details" onclick="hideDetal()">
+          <div id="detal_1">
+              <h2 class="title">БАЗОВИЙ КУРС (структурне програмування)</h2>
+
+              <p>Ознайомчий курс із структурним програмування, алгоритмізацією, призначений для новачків у програмуванні, а також початківців-розробників і програмістів, які бажають в найкоротший строк вивчити основи програмування.</p>
+
+              <h2>ВИМОГИ  :</h2>
+              <ul>
+                  <li>володіння персональним комп’ютером</li>
+                  <li>бажання навчатись</li>
+              </ul>
+
+
+              <h2>КУРС СКЛАДАЄТЬСЯ:</h2>
+              <ul>
+                  <li>Знайомство із середовищем розробки</li>
+                  <li>Змінні та ти даних</li>
+                  <li>Логічні опреації</li>
+                  <li>Методи</li>
+                  <li>Масиви</li>
+                  <li>Процедури та Функції</li>
+                  <li>Рекурсія</li>
+                  <li>Умовні конструкції</li>
+                  <li>Циклічні конструкції</li>
+              </ul>
+          </div>
+          <div id="detal_2">
+              <h2 class="title">JAVA (ANDROID) :</h2>
+
+              <p>Курс передбачає, що Ви знаєте основи ООП та структурного програмування, також знайомі із синтаксисом мови програмування JAVA  на початковому рівні. Вам надається можливість вивчення програмування на Android, акцентуючи увагу саме на розробці додатків під цю платформу з її особливостями.</p>
+
+              <h2>ВИМОГИ:</h2>
+              <ul>
+                  <li>Розуміння ООП та знання синтаксису JAVA</li>
+                  <li>Володіння основними бібліотеками JAVA</li>
+                  <li>Бажано досвід програмування на одній із об’єктно - орієнтованих мов програмування (С, С++, С#, Java...)</li>
+                  <li>Досвід роботи в одному з середовищі розробки (Intellij Idea, Android studio, Eclipse)</li>
+              </ul>
+
+              <h2>КУРС СКЛАДАЄТЬСЯ:</h2>
+              <ul>
+                  <li>Особливості ANDROID</li>
+                  <li>Основи роботи з Android Virtual Device</li>
+                  <li>Activity lifecycle</li>
+                  <li>Layout-файл в Activity.</li>
+                  <li>XML подання. Зміна орієнтації екрану.</li>
+                  <li>Fragment</li>
+                  <li>Обробка подій</li>
+                  <li>Adapters</li>
+                  <li>SQLite, Preferences</li>
+                  <li>Extracts та ін.</li>
+              </ul>
+          </div>
+          <div id="detal_3">
+              <h2 class="title">OBJECTIVE C (iOS):</h2>
+
+              <p>Навчання на цьому курсі передбачає перш за все вивчення особливостей програмування на Objective C, використовуючи середовище розробки XCode. Курс передбачає вивчення особливостей розробки додаткі для iPhone та iPad. Передбачається, що Ви володієте базовими поняттями програмування та основами ООП.</p>
+
+              <h2>ВИМОГИ:</h2>
+              <ul>
+                  <li>Розуміння ООП</li>
+                  <li>Бажано досвід програмування на одній із об’єктно - орієнтованих мов програмування (С, С++, С#, Java, Objective C...)</li>
+                  <li>Бажано Досвід роботи в середовищі розробки (Xcode)</li>
+              </ul>
+
+              <h2>КУРС СКЛАДАЄТЬСЯ:</h2>
+              <ul>
+                  <li>Особливості мови програмування Objective C</li>
+                  <li>Model-View-Controller в Objective C</li>
+                  <li>Життєвий цикл додатку</li>
+                  <li>Керування пам'яттю ARC</li>
+                  <li>Методи, наслідування, інкапсуляція та ін...</li>
+              </ul>
+          </div>
+      </div>
     <div class="wrapper">
     <header>
       <div class="container">
-          <h2>MOBILEZ<span>365</span></h2>
+          <a href="http://thinkmobiles.com/"><h2><span style="color: #000">THINK</span>MOBILES</h2></a>
           <h3>Запрошуємо на курси програмування,<br/>пробне заняття безкоштовне!</h3>
 		  <a class="details-kurs" href="javascript:;">Детальніше</a>
       </div>
@@ -54,29 +152,29 @@
               <div class="text">
 				Ознайомчий курс із структурним програмування, алгоритмізацією, призначений для новачків у програмуванні, а також...
               </div>
-              <a href="javascript:;">Детальніше</a>
+              <a href="javascript:;" onclick="ShowDetal('detal_1')">Детальніше</a>
             </div>
           </div>
           <div class="item">
-            <div class="img bk">
+            <div class="img bk android">
             </div>
             <div class="detail">
 			  <h3>ANDROID</h3>
               <div class="text">
 				Курс передбачає, що Ви знаєте основи ООП та структурного програмування, також знайомі із синтаксисом мови програмування... 
               </div>
-              <a href="javascript:;">Детальніше</a>
+              <a href="javascript:;" onclick="ShowDetal('detal_2')">Детальніше</a>
             </div>
           </div>
           <div class="item">
-            <div class="img bk">
+            <div class="img bk ios">
             </div>
             <div class="detail">
 			  <h3>iOS</h3>
               <div class="text">
 				Навчання на цьому курсі передбачає перш за все вивчення особливостей програмування на Objective C, використовуючи середовище...
               </div>
-              <a href="javascript:;">Детальніше</a>
+              <a href="javascript:;" onclick="ShowDetal('detal_3')">Детальніше</a>
             </div>
           </div>
         </div>
@@ -119,30 +217,30 @@
 		<tr class="baz">
 		  <td>&nbsp;</td>
           <td>Базовий</td>
-          <td>12.04.2014</td>
-          <td>6 тижнів</td>
+          <td>Іде набір</td>
+          <td>12 тижнів</td>
           <td>17.30-19.00</td>
-          <td>3</td>
+          <td>10</td>
           <td><a href="javascript:;">Зареєструватись</a></td>
 		  <td>&nbsp;</td>
 		</tr>
 		<tr class="and">
 		  <td>&nbsp;</td>
           <td>Android</td>
-          <td>12.04.2014</td>
-          <td>6 тижнів</td>
+          <td>Іде набір</td>
+          <td>12 тижнів</td>
           <td>17.30-19.00</td>
-          <td>3</td>
+          <td>10</td>
           <td><a href="javascript:;">Зареєструватись</a></td>
 		  <td>&nbsp;</td>
 		</tr>
 		<tr>
 		  <td>&nbsp;</td>
           <td>iOS</td>
-          <td>12.04.2014</td>
-          <td>6 тижнів</td>
+          <td>17.07.2014</td>
+          <td>12 тижнів</td>
           <td>17.30-19.00</td>
-          <td>3</td>
+          <td>10</td>
           <td><a href="javascript:;">Зареєструватись</a></td>
 		  <td>&nbsp;</td>
 		</tr>
@@ -156,7 +254,7 @@
 		  <h2>КУРСИ</h2>
           <div class="text">
 			Ми пропонуємо курси по програмуванню, які допоможуть Вам удосконалити свої знання, надати напрямок для саморозвитку або ж якщо Ви маєте лише загальне уявлення про те, що таке програмування і ніколи не займались ним професійно.  Рекомендуємо Вам розпочати вивчення з самих основ.<br/><br/>
-			Якщо ж Ви знайомі із структурним програмуванням, саме час розпачати вивчення основ об’єктно - орієнтованого програмування, для цього скористайтесь курсом ООП (С++/С). Для знайомих із об’єктно - орієнтованим програмуванням обирайте курс Java (Android) фбо Objective C ( iOS) орієнтований на комплексне та глибоке вивчення можливостей мови а також особливостями її ефективного використання.<br/><br/>
+			Якщо ж Ви знайомі із структурним програмуванням, саме час розпочати вивчення основ об’єктно - орієнтованого програмування, для цього скористайтесь курсом ООП (С++/С). Для знайомих із об’єктно - орієнтованим програмуванням обирайте курс Java (Android) або Objective C ( iOS) орієнтований на комплексне та глибоке вивчення можливостей мови а також особливостями її ефективного використання.<br/><br/>
 			Все, що Вам потрібно зробити - це заповнити нижче вказану форму, вказавши обраний курс, та ознайомитись із графіком проведення курсів.
           </div>
 		</div>
@@ -187,7 +285,7 @@
         </div>
         <div class="right">
           <div class="inner">
-			<form class="itform">
+			<form class="itform" action="hr@thinkmobiles.com" mathod="post">
 			  <div class="error">Please enter valid email!!!</div>
 			<h2>Реєстрація</h2>
 			<div>ІМЯ<span>*</span></div>
@@ -196,8 +294,30 @@
 			<input type="text" name="email"/>
 			<div>ТЕЛЕФОН<span>*</span></div>
 			<input type="text" name="phone"/>
-			<div>КУРС<span>*</span></div>
-			<input type="text"  name="kurs"/>
+            <div>
+                <table>
+                    <tr>
+                        <td class="leftform">
+                            <div>ВНЗ</div>
+                        </td>
+                        <td class="rightform">
+                            <div>КУРС<span>*</span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="leftform">
+                            <input type="text" name="vnz"/>
+                        </td>
+                        <td class="rightform">
+                            <select name="kurs">
+                                <option>Базовий</option>
+                                <option>Android</option>
+                                <option>iOS</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
             <div class="bottom">
 			  <a href="javascript:;">+ Резюме</a>
 			  <a class="send" href="javascript:;">Надіслати</a>
@@ -223,21 +343,14 @@
         <div class="item">
           <img src="i\landing\photo1.png">
           <div class="inner">
-            This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis
+             Це чудові змістовні курси. Я буду далі їх відвідувати. Дуже приємні викладачі із хорошими уроками.
         </div>
         <div class="clear"></div>
           </div>
-        <div class="item">
-          <img src="i\landing\photo2.png">
-          <div class="inner">
-            This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis
-          </div>
-        <div class="clear"></div>
-        </div>
         <div class="item">
           <img src="i\landing\photo3.png">
           <div class="inner">
-            This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis
+              Я прийшов сюди і не підозрював, що навчусь програмувати так швидко.
           </div>
         <div class="clear"></div>
 
@@ -246,87 +359,79 @@
         <div class="item">
           <img src="i\landing\photo4.png">
           <div class="inner">
-            This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis
-          </div>
-        </div>
-        <div class="item">
-          <img src="i\landing\photo5.png">
-          <div class="inner">
-            This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis
+              Сюди можна приходити за атмосферою і хорошим ставленням. Мені сподобались ці курси, рекомендую.
           </div>
         </div>
         <div class="item">
           <img src="i\landing\photo6.png">
           <div class="inner">
-            This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis
+              Однозначно рекомендую. Вони допомогли мені, тепер я працюю тут.
           </div>
         </div>
         <div class="clear">
         </div>
       </div>
     </section>
-	<footer class="footer">
-      <div class="grid-container">
-        <div class="grid-25 tablet-grid-100">
-          <h3>Mobilez365</h3>
-          <span class="copyright">Всі права захищені. © 2014</span>
+    <footer class="footer">
+        <div class="grid-container">
+            <div class="grid-25 tablet-grid-100 social">
+                <h3>THINK<span>MOBILES</span></h3>
+                <span class="copyright">All Rights Reserved. © 2014</span>
+                <ul class="social-network">
+                    <li class="linked-in">
+                        <a class="social-link" href="http://www.linkedin.com/groups?home=&amp;gid=8107633&amp;trk=anet_ug_hm" target="_blank" style="opacity: 1;" rel="nofollow">
+                            <span class="social-icon-m"><img alt="uzhgorod" src="i/desktop/social/linkedin_logo_white.png"></span>
+                        </a>
+                    </li>
+                    <li class="google-plus">
+                        <a class="social-link" href="https://plus.google.com/u/0/117317617493563414171/posts" target="_blank" style="opacity: 1;" rel="nofollow">
+                            <span class="social-icon-m" style="border-width: 2px; padding-top: 0px;"><img alt="uzhgorod" src="i/desktop/social/googleplus_logo_white.png"></span>
+                        </a>
+                    </li>
+                    <li class="facebook">
+                        <a class="social-link" href="https://www.facebook.com/Mobilez365" target="_blank" style="opacity: 1;" rel="nofollow">
+                            <span class="social-icon-m" style="border-width: 2px; padding-top: 0px;"><img alt="uzhgorod" src="i/desktop/social/FB_fLogo_white.png"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- social network -->
+            <div class="grid-25 middle">
+                <dl>
+                    <dt>&nbsp;</dt>
+                    <dd> <h4>Contact info:</h4></dd>
+                    <dt>&nbsp;</dt>
+                    <dd><p><a class="mail-link" href="mailto:hr@thinkmobiles.com">hr@thinkmobiles.com</a></p></dd>
+                    <dt>&nbsp;</dt>
+                    <dd>
+                        <p>+38 095 109 57 76 </p>
+                    </dd>
+                    <!--		<dt>&nbsp;</dt>
+                            <dd>
+                              <p><a href="skype:+380951095776" class="let-button"><span>Let's connect!</span></a> </p>-->
+                    </dd>
+                </dl>
+            </div>
+            <div class="grid-25 middle">
+                <dl>
+                    <dt>&nbsp;</dt>
+                    <dd>
+                        <h4>Location:</h4>
+                    </dd>
+                    <dt>&nbsp;</dt>
+                    <dd>
+                        <p> 47, Shandora Petefi sq.</p>
+                    </dd>
+                    <dt>&nbsp;</dt>
+                    <dd>
+                        <p>Uzhhorod, 88000, Ukraine</p>
+                    </dd>
+                </dl>
+            </div>
+        </div><!-- close container -->
+        <div class="clearfix">
         </div>
-        <!-- social network -->
-        <div class="grid-25 middle">
-          <dl>
-            <dt>&nbsp;</dt>
-            <dd> <h4>Контакти:</h4></dd>
-            <dt>&nbsp;</dt>
-            <dd><p><a class="mail-link" href="mailto:info@mobilesoft365.com"> info@mobilesoft365.com</a></p></dd>
-            <dt>&nbsp;</dt>
-            <dd>
-              <p>+38 095 567 67 29</p>
-            </dd>
-          </dl>
-        </div>
-        <div class="grid-25 middle">
-          <dl>
-            <dt>&nbsp;</dt>
-            <dd>
-              <h4>Наша адреса:</h4>
-            </dd>
-            <dt>&nbsp;</dt>
-            <dd>
-              <p>вул. Шандора Петефі 47</p>
-            </dd>
-            <dt>&nbsp;</dt>
-            <dd>
-              <p>88000, Ужгород</p>
-            </dd>
-            <dt>&nbsp;</dt>
-            <dd>
-              <p>Україна</p>
-            </dd>
-          </dl>
-        </div>
-        <div class="social grid-25  tablet-grid-100">
-          <ul class="social-network">
-            <li class="twitter">
-              <a class="social-link" href="https://www.twitter.com/MobileSoft365" target="_blank" style="opacity: 1;">
-                <span class="social-icon-m"><i class="icon-twitter"></i></span>
-              </a>
-            </li>
-            <li class="google-plus">
-              <a class="social-link" href="https://plus.google.com/u/0/117317617493563414171/posts" target="_blank" style="opacity: 1;">
-                <span class="social-icon-m"><i class="icon-google-plus"></i></span>
-              </a>
-            </li>
-            <li class="facebook">
-              <a class="social-link" href="https://www.facebook.com/MobileSoft365" target="_blank" style="opacity: 1;">
-                <span class="social-icon-m"><i class="icon-facebook"></i></span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div><!-- close container -->
-      <div class="clear">
-      </div>
-	</footer>
+    </footer>
     <!-- end of footer -->
 	</div>
   </body>
