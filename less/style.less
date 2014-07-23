@@ -2040,6 +2040,13 @@ section.main-page{
 			float:left;
 			text-align:center;
             height: 230px;
+
+            span {
+              color: #000;
+              position: relative;
+              left: 151px;
+            }
+
 			h4{
 				margin:10px 0;
 				padding:0px;
@@ -2070,42 +2077,63 @@ section.main-page{
 				}
 				&.green:hover{
 					background-color:rgb(141, 112, 142);
+                    span {
+                      color: #fff;
+                    }
 				}
 				&.blue{
 					border-top:3px solid rgb(128, 127, 255);
 				}
 				&.blue:hover{
 					background-color:rgb(128, 127, 255);
+                  span {
+                    color: #fff;
+                  }
 				}
 				&.orange{
 					border-top:3px solid rgb(231, 76, 60);
 				}
 				&.orange:hover{
 					background-color:rgb(231, 76, 60);
+                  span {
+                    color: #fff;
+                  }
 				}
 				&.red{
 					border-top:3px solid rgb(22, 160, 133);
 				}
 				&.red:hover{
 					background-color:rgb(22, 160, 133);
+                  span {
+                    color: #fff;
+                  }
 				}
 				&.salat{
 					border-top:3px solid rgb(241, 196, 15);
 				}
 				&.salat:hover{
 					background-color:rgb(241, 196, 15);
+                  span {
+                    color: #fff;
+                  }
 				}
 				&.silver{
 					border-top:3px solid rgb(39, 174, 96);
 				}
 				&.silver:hover{
 					background-color:rgb(39, 174, 96);
+                  span {
+                    color: #fff;
+                  }
 				}
 				&.dark-blue{
 					border-top:3px solid rgb(22, 160, 133);
 				}
 				&.dark-blue:hover{
 					background-color:rgb(22, 160, 133);
+                  span {
+                    color: #fff;
+                  }
 				}
 				&:hover{
 					color:white;
@@ -4935,7 +4963,7 @@ ul.default li.without-arrow:before {
 		}
 		h3{
 			font-size: @f40;
-			font-weight: 300;
+			font-weight: 100;
 			padding-top: 0px;
 			text-transform: none;
 			margin: 0;
@@ -4950,11 +4978,11 @@ ul.default li.without-arrow:before {
 		}
 		h4 {
 			font-size: @f20;
-			font-weight: 500;
+			font-weight: 100;
 			text-align: left;
 			padding-bottom: 10px;
 			padding-left: 0;
-			color:#777;
+			color:#000;
 			text-rendering: optimizelegibility;
 			line-height: 100%;
 			margin:0;
@@ -4963,7 +4991,6 @@ ul.default li.without-arrow:before {
 			color: @blue;
 			text-decoration:none;
 			line-height:29px;
-
 		}
 		a.mail-link{
 			color: @blue;
@@ -4971,10 +4998,11 @@ ul.default li.without-arrow:before {
 			line-height: @lh30;
 
 			&:hover {
-				text-decoration: none;
+				/*text-decoration: none;
 				border-bottom: 1px solid @blue;
 				padding-bottom: 0;
-				line-height: 20px;
+				line-height: 20px;*/
+                opacity: 0.85;
 			}
 		}
 		p{
@@ -5018,35 +5046,53 @@ ul.default li.without-arrow:before {
 				margin-top:3px;
 				li{
 					@width:35px;
-					width:@width+4;
-					height:@width+4;
+					width:39px;
+					height:39px;
 					float:left;
 					margin-left:5px;
 					display:block;
 					cursor:pointer;
 					&.linked-in{
 						margin-left:-2px;
+                        :hover {
+                          opacity: 0.85;
+                        }
 					}
 					span{
 						display:block;
-						width:@width;
-						height:@width;
+						width:39px;
+						height:39px;
 						margin:0 auto;
 						border:2px solid white;
 						background-color:#2bb3ec;
 						img{
 							display:block;
-							margin:2px auto 0 auto;
+							margin:4px auto 0 auto;
 						}
 						
 						
 					}
 					&.google-plus{
+
 						img{
 							display:block;
-							margin-top:4px;
+							margin-top:6px;
 						}
+                        :hover {
+                          opacity: .85;
+                        }
+                        span {
+                          background-color: #cc5144;
+                        }
 					}
+                    &.facebook {
+                        span {
+                          background-color: #405f94;
+                        }
+                        :hover {
+                          opacity: .85;
+                        }
+                    }
 				}
 			}
 
@@ -5217,7 +5263,7 @@ section.downloads {
 			list-style:none;
 			a {
 				background: url("../i/icons.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
-				color: #777 !important;
+				color: #000 !important;
 				display: block;
 				font-size: @f20;
 				height: 40px;
@@ -5231,7 +5277,7 @@ section.downloads {
 					background-position: 0 -42px;
 				}
 				span {
-					color: #777;
+					color: #000;
 					display: block;
 					font-size: 15px;
 					font-weight: 100;
@@ -6992,6 +7038,9 @@ section.downloads {
 		font-weight: 100;
 		color: #777;
 	}
+    .breakout.nopm {
+      float: left;
+    }
 	.breakout p {
         padding-top:15px;
 		font-size: @f20;
@@ -7141,6 +7190,126 @@ section.downloads {
 
 	.howwork #steps {
 		margin-top: 40px;
+
+        section {
+          h3 {
+            font-weight: 100;
+          }
+          .left {
+            padding: 170px 0 0 0;
+            float: left;
+            text-align: right;
+            width: 33.33%;
+          }
+          .center {
+            float:left;
+            display: block;
+            background-image: url('../i/hww/arrows.png');
+            width: 33.33%;
+            height: 374px;
+            text-align: center;
+            padding: 95px 90px;
+          }
+          .right {
+            padding: 170px 0 0 0;
+            float: right;
+            text-align: left;
+            width: 33.33%;
+          }
+          .idea {
+            display: block;
+            width: 524px;
+            height: 800px;
+            background-image: url('../i/hww/agile3.png');
+            margin: 0 auto;
+            margin-top: 480px;
+
+            .items {
+              position: relative;
+            }
+            #item1{
+              top: 190px;
+              left: -18px;
+            }
+            #item2{
+              top: 371px;
+              left: -150px;
+            }
+            #item3{
+              top: 350px;
+              left:115px;
+            }
+            #item4{
+              top: 595px;
+              left:115px;
+            }
+            #item5{
+              top: 440px;
+              left:-172px;
+            }
+            #item6{
+              text-align: left;
+              top: 143px;
+              left:471px;
+            }
+            ul li {
+              list-style: none;
+            }
+          }
+
+          .agile4 {
+            background-image: url('../i/hww/else.png');
+            width: 836px;
+            height:685px;
+            margin: 40px auto 40px auto;
+
+
+            .items{
+              text-align: left;
+
+            }
+            .item1{
+              position: relative;
+              top: 2px;
+              left: 25px;
+            }
+            .item2{
+              position: relative;
+              top: -40px;
+              left: 620px;
+            }
+            .item3{
+              position: relative;
+              top: 146px;
+              left: 246px;
+            }
+            .item4{
+              position: relative;
+              top: 110px;
+              left: 560px;
+            }
+            .item5{
+              position: relative;
+              top: 196px;
+              left: 200px;
+            }
+            .item6{
+              position: relative;
+              top: 151px;
+              left: 777px;
+            }
+            .item7{
+              position: relative;
+              top: 380px;
+              left: 248px;
+            }
+            .item8{
+              position: relative;
+              top: 336px;
+              left: 730px;
+            }
+          }
+        }
 	}
 	.howwork .analysis {
 		margin-top: 50px;
@@ -7149,6 +7318,7 @@ section.downloads {
 		text-align: left;
 		font-size: @f20;
 		line-height: @lh30;
+      width: 100%;
 	}
 }
 .dialog-box{
@@ -8248,6 +8418,7 @@ textarea.form-control.myform2{
 		color:#000;
 		font-size:@f20;
 		line-height: @lh30;
+        font-weight: 100;
 	}
 }
 .meter_zone h2{
