@@ -2042,7 +2042,9 @@ section.main-page{
             height: 230px;
 
             span {
-              color: @blue;
+              color: #000;
+              position: relative;
+              left: 151px;
             }
 
 			h4{
@@ -2075,42 +2077,63 @@ section.main-page{
 				}
 				&.green:hover{
 					background-color:rgb(141, 112, 142);
+                    span {
+                      color: #fff;
+                    }
 				}
 				&.blue{
 					border-top:3px solid rgb(128, 127, 255);
 				}
 				&.blue:hover{
 					background-color:rgb(128, 127, 255);
+                  span {
+                    color: #fff;
+                  }
 				}
 				&.orange{
 					border-top:3px solid rgb(231, 76, 60);
 				}
 				&.orange:hover{
 					background-color:rgb(231, 76, 60);
+                  span {
+                    color: #fff;
+                  }
 				}
 				&.red{
 					border-top:3px solid rgb(22, 160, 133);
 				}
 				&.red:hover{
 					background-color:rgb(22, 160, 133);
+                  span {
+                    color: #fff;
+                  }
 				}
 				&.salat{
 					border-top:3px solid rgb(241, 196, 15);
 				}
 				&.salat:hover{
 					background-color:rgb(241, 196, 15);
+                  span {
+                    color: #fff;
+                  }
 				}
 				&.silver{
 					border-top:3px solid rgb(39, 174, 96);
 				}
 				&.silver:hover{
 					background-color:rgb(39, 174, 96);
+                  span {
+                    color: #fff;
+                  }
 				}
 				&.dark-blue{
 					border-top:3px solid rgb(22, 160, 133);
 				}
 				&.dark-blue:hover{
 					background-color:rgb(22, 160, 133);
+                  span {
+                    color: #fff;
+                  }
 				}
 				&:hover{
 					color:white;
@@ -4940,7 +4963,7 @@ ul.default li.without-arrow:before {
 		}
 		h3{
 			font-size: @f40;
-			font-weight: 300;
+			font-weight: 100;
 			padding-top: 0px;
 			text-transform: none;
 			margin: 0;
@@ -4955,11 +4978,11 @@ ul.default li.without-arrow:before {
 		}
 		h4 {
 			font-size: @f20;
-			font-weight: 500;
+			font-weight: 100;
 			text-align: left;
 			padding-bottom: 10px;
 			padding-left: 0;
-			color:#777;
+			color:#000;
 			text-rendering: optimizelegibility;
 			line-height: 100%;
 			margin:0;
@@ -5023,8 +5046,8 @@ ul.default li.without-arrow:before {
 				margin-top:3px;
 				li{
 					@width:35px;
-					width:51px;
-					height:51px;
+					width:39px;
+					height:39px;
 					float:left;
 					margin-left:5px;
 					display:block;
@@ -5037,14 +5060,14 @@ ul.default li.without-arrow:before {
 					}
 					span{
 						display:block;
-						width:51px;
-						height:51px;
+						width:39px;
+						height:39px;
 						margin:0 auto;
 						border:2px solid white;
 						background-color:#2bb3ec;
 						img{
 							display:block;
-							margin:10px auto 0 auto;
+							margin:4px auto 0 auto;
 						}
 						
 						
@@ -5053,7 +5076,7 @@ ul.default li.without-arrow:before {
 
 						img{
 							display:block;
-							margin-top:12px;
+							margin-top:6px;
 						}
                         :hover {
                           opacity: .85;
@@ -5240,7 +5263,7 @@ section.downloads {
 			list-style:none;
 			a {
 				background: url("../i/icons.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
-				color: #777 !important;
+				color: #000 !important;
 				display: block;
 				font-size: @f20;
 				height: 40px;
@@ -5254,7 +5277,7 @@ section.downloads {
 					background-position: 0 -42px;
 				}
 				span {
-					color: #777;
+					color: #000;
 					display: block;
 					font-size: 15px;
 					font-weight: 100;
