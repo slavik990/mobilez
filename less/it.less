@@ -119,7 +119,7 @@ body{
 }
 .container{
 	margin:0 auto;
-	padding:0 300px;
+	padding:0 200px;
 }
 @media screen and (max-width: 1600px) {
 
@@ -728,7 +728,7 @@ section.resume{
     }
 }*/
 .footer{
-  padding: 14px 0 6px 0;
+  /*padding: 14px 10% 6px 10%;*/
   text-align: center;
   //	background: #666;
   position: relative;
@@ -739,7 +739,7 @@ section.resume{
   .grid-container {
     margin-left: auto;
     margin-right: auto;
-    padding:0 @defPad;
+    padding:0 200px;
     //		max-width: 1200px;
     //		padding-left: 10px;
     //		padding-right: 10px;
@@ -747,6 +747,10 @@ section.resume{
       float:left;
       width:33.33%;
       text-align: left;
+    }
+    .last {
+      float: right;
+      text-align: right;
     }
     a.let-button span {
       background-color: #4cb743;
@@ -808,7 +812,7 @@ section.resume{
     }
     dl {
       display: block;
-      width: 220px;
+      width: 150px;
       margin: 0 auto;
       font-size: 15px;
       dt{
@@ -840,33 +844,51 @@ section.resume{
         margin-top:3px;
         li{
           @width:35px;
-          width:@width+4;
-          height:@width+4;
+          width:51px;
+          height:51px;
           float:left;
           margin-left:5px;
           display:block;
           cursor:pointer;
           &.linked-in{
             margin-left:-2px;
+            :hover {
+              opacity: 0.85;
+            }
           }
           span{
             display:block;
-            width:@width;
-            height:@width;
+            width:51px;
+            height:51px;
             margin:0 auto;
             border:2px solid white;
             background-color:#2bb3ec;
             img{
               display:block;
-              margin:2px auto 0 auto;
+              margin:10px auto 0 auto;
             }
 
 
           }
           &.google-plus{
+
             img{
               display:block;
-              margin-top:4px;
+              margin-top:12px;
+            }
+            :hover {
+              opacity: .85;
+            }
+            span {
+              background-color: #cc5144;
+            }
+          }
+          &.facebook {
+            span {
+              background-color: #405f94;
+            }
+            :hover {
+              opacity: .85;
             }
           }
         }
