@@ -142,7 +142,7 @@ body{
 header{
 	.image("header.png");
 	background-size:100% auto;
-	height:593px;
+	height:510px;
 	color:#397bca;
 	padding:1px;
 
@@ -204,13 +204,14 @@ header{
 		}
 	}
 	.text-container{
-		text-align:center;
+		text-align:left;
 		margin-bottom:20px;
         font-family: "helveticaneuecyrlight", Arial, Helvetica, sans-serif !important;
 	}
 	.list{
 		.item{
-			width:33.33%;
+            margin-bottom: 40px;
+			width:50%;
 			float:left;
 			.img{
                 position: relative;
@@ -224,6 +225,9 @@ header{
                     }
                     &.ios{
                       .image("AppleIT.png");
+                    }
+                    &.ga{
+                      .image("GA.png");
                     }
 				}
 			}
@@ -255,8 +259,9 @@ header{
 	}
 }
 section.plan{
-	.image("tb-bg.png");    
-	background-size:100% auto;
+	/*.image("tb-bg.png");
+	background-size:100% 100%;*/
+  background-color: #4982d3;
 	padding:30px 0 50px;
 	h2{
 		color:white;
@@ -270,6 +275,9 @@ section.plan{
 		font-size:18px;
 		tr{
 			height:55px;
+            &.znak {
+              background-color: #91b6e4;
+            }
 			&.zag{
 				font-size:18px;
 				color:#5b96d8;
@@ -296,12 +304,12 @@ section.plan{
 	}
 }
 section.kursi{
-	padding-top:20px;
+	padding-top:40px;
 	padding-bottom:20px;
 	h2{
 		.nomp;
 		text-transform:uppercase;
-		font-size:28px;
+		font-size:36px;
 		color:#397ccb;
 	}
 	.left{
@@ -312,6 +320,7 @@ section.kursi{
           margin-bottom: 20px;
         }
 		.text{
+            text-align: justify;
             font-family: "helveticaneuecyrlight", Arial, Helvetica, sans-serif !important;
 			padding-right:20px;
 		}
@@ -323,30 +332,30 @@ section.kursi{
           margin-bottom: 20px;
         }
 		img{
-			margin-top: -50px;
+			margin-top: -40px;
 			display: block;
 		}
 	}
 }
 section.resume{
-	padding-top:40px;
-	padding-bottom:40px;
+	padding-top:20px;
+	padding-bottom:20px;
 	.inner{
-		min-height:420px;
-        height: 700px;
+        height: 450px;
 	}
 	.left{
 		width:100%;
-        margin-bottom: 20px;
+        margin-bottom:0 ;
 		float:left;
+        font-size: 18px;
 		.inner{
-			padding:30px;
-			border-radius:3px;
+			padding:50px;
+			border-radius:0px;
 			background-color:#81baea;
 			h2{
 				.nomp;
 				color:#fff;
-				font-size:28px;
+				font-size:36px;
 				text-transform:uppercase;
                 margin-bottom: 20px;
 			}
@@ -356,12 +365,12 @@ section.resume{
 			}
 			a{
 				.lh(30px);
-				margin-top:20px;
+				margin:20px auto;
 				color:#2d577f;
 				font-size:20px;
 				text-decoration:none;
 				display:block;
-				width:100%;
+				width:50%;
 				text-align:center;
 				border-radius:3px;
 				background-color:#f6fafe;
@@ -373,11 +382,12 @@ section.resume{
 		width:100%;
 		float:left;
 		.inner{
-			padding:30px;
-			border-radius:3px;
+			padding:50px;
+			border-radius:0px;
 			background-color:#11497d;
 			color:white;
 			font-size:18px;
+            height: 430px;
 			h2{
 				.nomp;
 				color:white;
@@ -392,6 +402,7 @@ section.resume{
 				}
 				&.bottom{
 					a{
+                        float: left;
 						.lh(30px);
 						display:block;
 						width:48%;
@@ -401,6 +412,7 @@ section.resume{
 						color:white;
 						text-align:center;
 						text-decoration:none;
+                        margin-top: 10px;
 						&:first-child{
 							float:left;
 						}
@@ -415,31 +427,59 @@ section.resume{
 				width:100%;
 				height:25px;
 			}
+            input[type=file] {
+              display: none;
+            }
             select {
                 width:100%;
                 height:30px;
             }
-            table {
-              padding:0;
-              margin:0;
-              width: 100%;
-              position: relative;
-              top:-10px;
+            ul {
+              margin: 0;
+              padding: 0;
+              width: 48%;
+              float: left;
+              li {
+                list-style: none;
+                padding: 0;
+                margin: 0;
 
-              tr {
-                height: 25px;
+                input {
+                  width: 100%;
+                }
               }
-              td.leftform{
-                width: 50%;
-                padding: 0 5px 0 0;
-              }
-              td.rightform{
-                width:50%;
-                padding: 0 0 0 5px;
-              }
+            }
+            .rightform {
+              position: relative;
+              left: 3px;
+              width: 49%;
+              float: right;
+              padding: 0;
+            }
+            .facult {
+              text-align: left;
+              margin-top: 20px;
             }
 		}
 	}
+}
+.resume {
+  .container {
+    padding: 0;
+
+    .left {
+      .inner{
+        padding-left: 200px;
+        padding-right: 200px;
+      }
+    }
+    .right {
+      .inner{
+        padding-left: 200px;
+        padding-right: 200px;
+      }
+    }
+  }
 }
 #feedback{
     .image("tired-bg.png");    
@@ -451,7 +491,7 @@ section.resume{
         color:#20528c;
         font-size:36px;
         text-align:center;
-        margin:40px 0;
+        margin:20px 0;
     }
 	.title {
 		font-weight: 300;
@@ -501,10 +541,10 @@ section.resume{
 }
 
 .detail h3 {
-  font-size: 28px;
+  font-size: 22px;
 }
 .plan h2 {
-  font-size: 28px;
+  font-size: 36px;
 }
 /*.footer{
 	.image("footer.png");
@@ -908,6 +948,19 @@ section.resume{
     background-color: #fff;
   }
   #detal_3 {
+    border: 3px solid #397bca;
+    border-radius: 10px;
+    padding: 10px;
+    visibility: hidden;
+    z-index: 10001;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 800px;
+    background-color: #fff;
+  }
+  #detal_4 {
     border: 3px solid #397bca;
     border-radius: 10px;
     padding: 10px;
