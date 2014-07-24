@@ -155,6 +155,7 @@ $(document).ready(function(){
         $('html, body').animate({
             scrollTop: $('.resume .right').offset().top
         }, 'slow');
+        $('.select option').eq($(this).data("kurs")).attr("selected","selected");
     });
     $(".resumAdd").click(function(e){
         $('.addresum').click();
