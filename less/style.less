@@ -1,9 +1,9 @@
 @imagesfolder: '../i/desktop';
 @thinborder: 1px solid;
 @defaultBlue: #777;
-@defaultBlueHover: #2bb3ec;
-@defaultBlueSelected: #2bb3ec;
-@blue:#2bb3ec;
+@defaultBlueHover: #2e9df7;
+@defaultBlueSelected: #2e9df7;
+@blue:#2e9df7;
 @defPad:3%;
 @defPadPage:10%;
 
@@ -180,6 +180,24 @@ body {
 .nomp{
     padding:0px;
     margin:0px;
+}
+#itschool {
+  background-color: #2e9df7;
+  display: block;
+  width:185px;
+  min-height: 35px;
+  position: fixed;
+  right: 235px;
+  top: 10px;
+  z-index: 10000002;
+  font-size:18px;
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 26px;
+
+  &:hover {
+    color: #fff;
+  }
 }
 .main-menu-container {
     display:none;
@@ -1113,7 +1131,7 @@ html[xmlns] .clearfix {
         z-index:1000;
 		position:relative;
 		margin-top:-40px;
-        padding-right: 37%;
+        padding-right: 35%;
 		.phone-number{
 			right:0;
 			line-height:19px;
@@ -3348,9 +3366,10 @@ section.main-page{
 }
 
 #startup{
-    height: 860px;
+    height: 705px;
 	font-size:@f20;
 	line-height: @lh30;
+    margin-bottom: 40px;
 	.container{
 		padding:0 @defPadPage;
 	}
@@ -3364,10 +3383,9 @@ section.main-page{
 	}
 	.text{
         font-family: "helveticaneuecyrlight", Arial, Helvetica, sans-serif !important;
-		text-align:center;
-		font-size:@f30;
+		font-size:18px;
 		line-height: @lh40;
-		color:#777;
+		color:#000;
 		margin-bottom:28px;
         font-weight: 100;
 	}
@@ -3420,8 +3438,11 @@ section.main-page{
 #testing{
     padding:1px;
 	border-top: 1px solid silver;
-	border-bottom: 1px solid silver;
-	margin-top:20px;
+	margin:20px 0 40px 0;
+
+    .act {
+      display: block;
+    }
     .title-section{
         .title{
 			background-image:url(../i/desktop/divider.jpg);
@@ -3435,9 +3456,101 @@ section.main-page{
 
     }
     >.container{
-		padding:0 @defPadPage;
-		//		margin-top:110px !important;
+		padding: 50px 0 0 0 ;
 	}
+
+    /*.content{
+      margin-top: 55px;
+    }*/
+    .choose-contacts li a {
+      text-decoration: none;
+    }
+    .choose-contacts li a.active {
+       /* border-bottom-style: solid; */
+       color: #2bb3ec !important;
+       border-bottom: none;
+     }
+    .choose-contacts li a:hover{
+      text-decoration: none;
+      color:@blue !important;
+      padding-bottom: 0px;
+      height:39px;
+    }
+    .enterprise {
+        ul {
+          list-style: none;
+
+          a {
+            text-decoration: none;
+            border: none;
+          }
+        }
+    }
+    
+    .firstpage{
+      display: block;
+      padding: 0 10%;
+
+      h2 {
+        font-size: 36px;
+        font-weight: 100;
+        color: #777;
+        margin: 20px 0;
+      }
+      p {
+        font-size: 18px;
+        line-height: 25px;
+        text-align: left;
+      }
+      .items {
+        font-family: "helveticaneuecyrlight", Arial, Helvetica, sans-serif !important;
+        height: 192px;
+        margin-bottom: 20px;
+
+        div {
+          border: 1px solid #cecece;
+          margin-left: 157px;
+          padding: 10px;
+          height: 192px;
+        }
+
+        h3 {
+          padding: 0;
+          margin: 0;
+          font-size: 28px;
+          font-weight: 100;
+          color: #777;
+          text-align: left;
+        }
+      }
+      .item1 {
+        background-image: url("../i/enter/business_team.png");
+        background-repeat: no-repeat;
+        background-position: 0 50%;
+        margin-top: 40px;
+      }
+      .item2 {
+        background-image: url("../i/enter/business_hour.png");
+        background-repeat: no-repeat;
+        background-position: 0 50%;
+      }
+      .item3 {
+        background-image: url("../i/enter/business_project.png");
+        background-repeat: no-repeat;
+        background-position: 0 50%;
+        margin-bottom: 20px;
+        height: 215px;
+
+        div {
+          height: 215px;
+        }
+      }
+    }
+    .secpage {
+      display: none;
+      padding: 0 10%;
+    }
+
     .partner-carusel{
         width:100%;
         .container{
@@ -3553,7 +3666,6 @@ section.main-page{
 
     }
     .container{
-        margin-top:50px;
         >h2{
             font-size:@f40;
 			line-height: @lh40;
@@ -6721,7 +6833,6 @@ section.downloads {
 		list-style-type: none;
 		margin-left: 30px;
 		li {
-			font: 23px/24px 'PT Sans';
 			padding-left: 35px;
 			background: url("../i/liline.png") 0 3px no-repeat;
 			text-align: left;
@@ -6890,6 +7001,211 @@ section.downloads {
 	text-decoration: none;
 }
 
+.cloud_deployment #cloud_deployment {
+  .items {
+    position: relative;
+    display: block;
+    float: left;
+    font-weight: bold;
+  }
+  .item1 {
+    color: #777;
+    left: 140px;
+    top: -12px;
+    background-color: #fff;
+  }
+  .item2{
+    left: 182px;
+    top: 75px;
+  }
+  .item3{
+    font-size: 9px;
+    left: -15px;
+    top: 78px;
+  }
+  .item4{
+    font-weight: bold;
+    font-size: 12px;
+    left: -65px;
+    top: 194px;
+    span {
+      font-size: 21px;
+      color: #fff;
+    }
+  }
+  .item5{
+    color: #fff;
+    font-size: 12px ;
+    left: 39px;
+    top: 126px;
+  }
+  .item6{
+    color: #fff;
+    font-size: 12px ;
+    left: -10px;
+    top: 266px;
+  }
+  .item7{
+    left: 214px;
+    top: 196px;
+  }
+  .item8{
+    left: -99px;
+    top: 162px;
+    span{
+      font-weight: 100;
+    }
+  }
+  .item9{
+    left: -217px;
+    top: 231px;
+    span{
+      font-weight: 100;
+    }
+  }
+  .item10{
+    font-size: 12px;
+    left: -186px;
+    top: 288px;
+    width:206px;
+    height:133px;
+    border: 2px dashed #777;
+    color: #fff;
+  }
+  .item11{
+    font-size: 12px;
+    left: 24px;
+    top: 15px;
+  }
+  .item12{
+    font-size: 12px;
+    left: 73px;
+    top: 15px;
+  }
+  .item13{
+    font-size: 12px;
+    left: -85px;
+    top: 68px;
+  }
+  .item14{
+    font-size: 12px;
+    left: 116px;
+    top: 25px;
+  }
+}
+
+#cloud_endpoint {
+  width: 744px;
+  height: 514px;
+  border: 2px dashed #777;
+  margin: 0 auto;
+  border-radius: 20px;
+  background-image: url('../i/backend/cloud_endpoint1.png');
+  background-repeat: no-repeat;
+  background-position: 35% 50%;
+
+  .items {
+    display: block;
+    float: left;
+    position: relative;
+  }
+  .item1{
+    left: 90px;
+    top: 65px;
+    font-weight: bold;
+  }
+  .item2{
+    color: #fff;
+    font-size: 12px;
+    left: 53px;
+    top: 135px;
+    font-weight: bold;
+  }
+  .item3{
+    left: 0px;
+    top: 405px;
+    font-weight: bold;
+  }
+  .item4{
+    color: #fff;
+    font-size: 12px;
+    left: -54px;
+    top: 304px;
+    font-weight: bold;
+  }
+  .item5{
+    left: 10px;
+    top: 160px;
+  }
+  .item6{
+    left: -89px;
+    top: 300px;
+  }
+  .item7{
+    left: -5px;
+    top: 170px;
+  }
+  .item8{
+    display: block;
+    background: url('../i/backend/google_app.png');
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    padding-left: 50px;
+    left: 116px;
+    top: 160px;
+  }
+  .item9{
+    color: #fff;
+    left: -116px;
+    top: 215px;
+    font-weight: bold;
+    font-size: 12px;
+  }
+  .item10{
+    left: 506px;
+    top: 310px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .item11{
+    left: 426px;
+    top: 375px;
+    font-size: 12px;
+  }
+  .item12{
+    display: block;
+    left: 254px;
+    top: -44px;
+    width: 300px;
+    height: 90px;
+    text-align: justify;
+    font-size: 12px;
+    border: 2px dashed #777;
+    padding: 5px 10px;
+  }
+  .item13{
+    display: block;
+    left: 418px;
+    top: -30px;
+    width: 300px;
+    height: 30px;
+    text-align: justify;
+    font-size: 12px;
+    border: 2px dashed #777;
+    padding: 5px 10px;
+  }
+  .item14{
+    -webkit-transform: rotate(-90deg); /* Chrome y Safari */
+    -moz-transform: rotate(-90deg); /* Firefox */
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); /* Internet Explorer */
+    -o-transform: rotate(-90deg); /* Opera */
+    left: -220px;
+    top: 87px;
+  }
+
+
+}
 #service {
 
   .howw.firstpage {
@@ -6900,8 +7216,9 @@ section.downloads {
       font-family: "helveticaneuecyrlight", Arial, Helvetica, sans-serif;
       padding: 0;
       margin: 20px 0;
-      font-size: 38px;
+      font-size: 36px;
       color: #a8a8a8;
+      font-weight: 100;
     }
     .left {
       width: 50%;
@@ -6945,13 +7262,13 @@ section.downloads {
       .headerSection {
         width: 95%;
         h2 {
-          font-size: 26px;
+          font-size: 18px;
           padding-top: 6px;
         }
       }
 
       #apps {
-        height: 165px;
+        height: 130px;
         width: 766px;
         margin: 0 auto;
         a{
@@ -6989,13 +7306,15 @@ section.downloads {
       }
       h2 {
         display: block;
-        border-top: 2px solid #d2d2d2;
+        border-top: 1px solid #000;
         font-family: "helveticaneuecyrlight", Arial, Helvetica, sans-serif;
-        font-size: 20px;
+        font-size: 18px;
         text-align: left;
         margin-left: 49px;
         padding-top: 10px;
         padding-left: 10px;
+        color: #000;
+        font-weight: 100;
       }
 
     }
@@ -7027,7 +7346,6 @@ section.downloads {
 	p{
 		a{
 			color: @blue;
-			border-bottom: 1px solid @blue;
 			text-decoration:none;
 		}
 
@@ -7209,6 +7527,8 @@ section.downloads {
             float:left;
             display: block;
             background-image: url('../i/hww/arrows.png');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
             width: 33.33%;
             height: 374px;
             text-align: center;
@@ -8112,7 +8432,7 @@ textarea.form-control.myform2{
 	height: 100%;
 	color: #000;
 	margin-top: 10px;
-	margin-bottom: 0px;
+	margin-bottom: 40px;
 	font-family: "helveticaneuecyrlight", Arial, Helvetica, sans-serif;
 	padding:0 @defPadPage;
 
@@ -8158,8 +8478,8 @@ textarea.form-control.myform2{
 		list-style: none;
 		margin: 0;
 		padding: 0;
-		font-size: @f20;
-		line-height: @lh30;
+		font-size: 18px;
+		line-height: 25px;
 		margin-bottom: 10px;
 		max-width: 310px;
 		a{
@@ -8169,7 +8489,7 @@ textarea.form-control.myform2{
 	}
 
 	.vacancies-lists .vacancies-list-title {
-		font-size: @f20;
+		font-size: 22px;
 		line-height: normal;
 		margin: 0;
 		color: #777;
@@ -9202,10 +9522,11 @@ audio, canvas, video {
 			list-style:none;
 			li{
 				a{
+                    font-weight: 100;
 					height:39px;
 					&:hover{
 						text-decoration: none !important;
-						border-bottom: 1px solid #2bb3ec;
+                        color: #2e9df7 !important;
 						padding-bottom: 0px;
 					}
 					&.active{
@@ -9313,8 +9634,8 @@ transition: all 300ms ease-in-out;
   }
 }
 .client-tables{
-	margin-bottom: 70px;
-margin-top: 30px;
+	margin-bottom: 40px;
+    margin-top: 30px;
 }
 
 

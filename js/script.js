@@ -110,6 +110,13 @@ $(document).ready(function(){
 		$("#how-we-wo .howw").eq(n).show();
 		$(this).addClass("active");
 	});
+    $(".enterprise li a").click(function(){
+        $(".enterprise li a.active").removeClass("active");
+        var n = $(".enterprise li a").index($(this));
+        $("#enter-prise .enter").hide();
+        $("#enter-prise .enter").eq(n).show();
+        $(this).addClass("active");
+    });
 	$(".mobile-development-platforms .float-item").click(function(){
 		$(this).parent().find(".active").removeClass("active");
 		$(this).addClass("active");
