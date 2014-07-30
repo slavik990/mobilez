@@ -353,7 +353,7 @@ $(document).ready(function(){
             return false;
         }
         else { $('div.inTouch').find('ul.formErrors li').hide();
-            $.post("mail.php", $("#contact-form").serialize(),  function(data) {  _gaq.push(['_trackEvent', "Client Feedback", "Email", "Email"]);
+            $.post("./mail.php", $("#contact-form").serialize(),  function(data) {  _gaq.push(['_trackEvent', "Client Feedback", "Email", "Email"]);
             $('#success').html('The Message sent!');
             $('#success').hide(2000);   });
           
