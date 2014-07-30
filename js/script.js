@@ -1072,7 +1072,7 @@ $(document).ready(function(){
             marker = new google.maps.Marker({
                 map: map,
                 position: Coordinates,
-                tooltip: '<B>Mobilez365</B></br>Ukraine, Uzhhorod</br> Shandora Petefi sq., 47',
+                tooltip: '<B>Thinkmobiles</B></br>Ukraine, Uzhhorod</br> Shandora Petefi sq., 47',
                 icon:'../i/desktop/marker1.png'
             });
 

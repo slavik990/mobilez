@@ -193,7 +193,7 @@ body {
   font-size:18px;
   text-decoration: none;
   color: #fff;
-  padding: 5px 26px;
+  padding: 5px 24px;
 
   &:hover {
     color: #fff;
@@ -1140,6 +1140,7 @@ html[xmlns] .clearfix {
 			margin-left:5%;
 		}
         a{
+            height: 37px;
             line-height:56px;
             display: inline-block;
             text-transform: uppercase;
@@ -1165,6 +1166,7 @@ html[xmlns] .clearfix {
 				text-decoration: none;
 				padding-bottom: 0px;
 				line-height: 19px;
+                border-bottom: 5px solid @defaultBlueHover;
 			}
             &.selected{
 				color: @defaultBlueSelected !important;
@@ -2105,9 +2107,11 @@ section.main-page{
 				}
 				&.blue{
 					border-top:3px solid rgb(128, 127, 255);
+                    cursor: default;
 				}
 				&.blue:hover{
 					background-color:rgb(128, 127, 255);
+
                   span {
                     color: #fff;
                   }
@@ -2132,6 +2136,7 @@ section.main-page{
 				}
 				&.salat{
 					border-top:3px solid rgb(241, 196, 15);
+                    cursor: default;
 				}
 				&.salat:hover{
 					background-color:rgb(241, 196, 15);
@@ -3336,8 +3341,7 @@ section.main-page{
 	padding-left:35px;
 	background-position:5px 50%;
 }
-.stick_menu .back{	
-	border-radius:8px;
+.stick_menu .back{
 	border:1px solid #000000;
 	height:310px; 
 	color:#FFF; 
@@ -3349,7 +3353,7 @@ section.main-page{
 .stick_menu .back h2{padding-bottom:12px;}
 .stick_menu .back h3{font-size:@f20;font-weight:100; text-decoration:none; padding-top:15px; font-family:HelveticaNeueLTStd-BdCn;}
 .stick_menu .back p{font-size:@f20; padding-bottom:10px;}
-.stick_menu .back .connectwith{width:183px; height:60px; margin:0 auto; position:absolute; bottom:0; left:0; border-radius:0 0 8px 8px; -moz-border-radius:0 0 8px 8px; -o-border-radius:0 0 8px 8px; -ms-border-radius:0 0 8px 8px; -webkit-border-radius:0 0 8px 8px; overflow:hidden}
+.stick_menu .back .connectwith{width:183px; height:60px; margin:0 auto; position:absolute; bottom:0; left:0; overflow:hidden}
 .stick_menu .back a.Phone, .stick_menu .back a.Skype, .stick_menu .back a.Email{background:url(../i/stick_skype_connect.png) no-repeat; height:61px; display:block; -webkit-transition:background-position .3s ease;-moz-transition:background-position .3s ease;-o-transition:background-position .3s ease;-ms-transition:background-position .3s ease;transition:background-position .3s ease;}
 .stick_menu .back a.Phone{background-position:0 0; float:left; width:61px;}
 .stick_menu .back a.Phone:hover{background-position:0 -61px;}
@@ -7529,10 +7533,11 @@ section.downloads {
             background-image: url('../i/hww/arrows.png');
             background-repeat: no-repeat;
             background-size: 100% 100%;
-            width: 33.33%;
-            height: 374px;
+            width: 348px;
+            height: 348px;
             text-align: center;
-            padding: 95px 90px;
+            padding: 67px 67px;
+            margin: 0 auto;
           }
           .right {
             padding: 170px 0 0 0;
