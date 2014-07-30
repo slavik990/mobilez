@@ -18,13 +18,13 @@ $(document).ready(function(){
 			h.arc(t,n,f,u,r,e),
 			o.arc(t,n,f,u,r,e),
 			i.arc(t,n,f,u,r,e),
-			s.strokeStyle="#4cb743",
+			s.strokeStyle="#16a085",
 			s.lineWidth=30,s.stroke(),
-			h.strokeStyle="#4292be",
+			h.strokeStyle="#8d708e",
 			h.lineWidth=30,h.stroke(),
-			o.strokeStyle="#ff6801",
+			o.strokeStyle="#f1c40f",
 			o.lineWidth=30,o.stroke(),
-			i.strokeStyle="#0e559e",
+			i.strokeStyle="#27ae60",
 			i.lineWidth=30,
 			i.stroke()}
 	}
