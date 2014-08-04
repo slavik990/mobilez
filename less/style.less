@@ -1153,7 +1153,6 @@ html[xmlns] .clearfix {
             text-decoration: none;
             margin-left: 6%;
             position: relative;
-			border-bottom: 1px solid white ;
 			padding-bottom: 0px;
 			line-height: 21px;
             &.offer{
@@ -1167,11 +1166,13 @@ html[xmlns] .clearfix {
 				text-decoration: none;
 				padding-bottom: 0px;
 				line-height: 19px;
-                border-bottom: 5px solid @defaultBlueHover;
+                border-bottom: 3px solid @defaultBlueHover;
 			}
             &.selected{
 				color: @defaultBlueSelected !important;
-				border-bottom: none;
+				border-bottom: 3px solid @defaultBlueSelected ;
+                padding-bottom: 0px;
+                line-height: 19px;
             }
 
             &:first-child{
@@ -2035,7 +2036,7 @@ html[xmlns] .clearfix {
 
 section.main-page{
 	.container{
-		margin-top:65px;
+		margin-top:55px;
 		h3{
 			color:#2bb3ec;
 			font-size:32px;
@@ -2050,7 +2051,8 @@ section.main-page{
 			text-align:center;
 			font-size:@f40;
 			font-weight:100;
-			line-height:60px;
+			line-height:36px;
+          margin: 20px 0;
 		}
 	}
 	.items{
@@ -3483,14 +3485,16 @@ section.main-page{
     }
     .choose-contacts li a.active {
        /* border-bottom-style: solid; */
-       color: #2bb3ec !important;
-       border-bottom: none;
+       color: @blue !important;
+       border-bottom: 3px solid @blue;
+       height: 54px;
      }
     .choose-contacts li a:hover{
       text-decoration: none;
       color:@blue !important;
       padding-bottom: 0px;
-      height:39px;
+      height:54px;
+      border-bottom: 3px solid @blue;
     }
     .enterprise {
         ul {
@@ -5224,6 +5228,18 @@ ul.default li.without-arrow:before {
                         :hover {
                           opacity: .85;
                         }
+                    }
+                    &.vk {
+                      span {
+                        background-color: #5f87aa;
+                      }
+                      :hover {
+                        opacity: .85;
+                      }
+                      img {
+                        height: 24px;
+                        margin: 6px auto 0 auto;
+                      }
                     }
 				}
 			}
@@ -7112,9 +7128,8 @@ section.downloads {
 
 #cloud_endpoint {
   width: 744px;
-  height: 514px;
-  border: 2px dashed #777;
-  margin: 0 auto;
+  height: 380px;
+  margin: 40px auto 40px auto;
   border-radius: 20px;
   background-image: url('../i/backend/cloud_endpoint1.png');
   background-repeat: no-repeat;
@@ -7127,39 +7142,39 @@ section.downloads {
   }
   .item1{
     left: 90px;
-    top: 65px;
+    top: 5px;
     font-weight: bold;
   }
   .item2{
     color: #fff;
     font-size: 12px;
     left: 53px;
-    top: 135px;
+    top: 65px;
     font-weight: bold;
   }
   .item3{
     left: 0px;
-    top: 405px;
+    top: 340px;
     font-weight: bold;
   }
   .item4{
     color: #fff;
     font-size: 12px;
     left: -54px;
-    top: 304px;
+    top: 240px;
     font-weight: bold;
   }
   .item5{
     left: 10px;
-    top: 160px;
+    top: 82px;
   }
   .item6{
     left: -89px;
-    top: 300px;
+    top: 240px;
   }
   .item7{
     left: -5px;
-    top: 170px;
+    top: 105px;
   }
   .item8{
     display: block;
@@ -7168,31 +7183,31 @@ section.downloads {
     background-position: 0 50%;
     padding-left: 50px;
     left: 116px;
-    top: 160px;
+    top: 95px;
   }
   .item9{
     color: #fff;
     left: -116px;
-    top: 215px;
+    top: 155px;
     font-weight: bold;
     font-size: 12px;
   }
   .item10{
     left: 506px;
-    top: 310px;
+    top: 243px;
     color: #fff;
     font-weight: bold;
     font-size: 14px;
   }
   .item11{
     left: 426px;
-    top: 375px;
+    top: 305px;
     font-size: 12px;
   }
   .item12{
     display: block;
     left: 254px;
-    top: -44px;
+    top: -102px;
     width: 300px;
     height: 90px;
     text-align: justify;
@@ -7203,7 +7218,7 @@ section.downloads {
   .item13{
     display: block;
     left: 418px;
-    top: -30px;
+    top: -93px;
     width: 300px;
     height: 30px;
     text-align: justify;
@@ -7217,7 +7232,7 @@ section.downloads {
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); /* Internet Explorer */
     -o-transform: rotate(-90deg); /* Opera */
     left: -220px;
-    top: 87px;
+    top: 22px;
   }
 
 
@@ -7341,12 +7356,16 @@ section.downloads {
 	text-decoration: none;
 	color:@blue !important;
 	padding-bottom: 0px;
-	height:39px;
+	height:54px;
+    border-bottom: 3px solid @blue;
 }
 #service .choose-contacts li a.active {
 	/*border-bottom-style: solid;*/
 	color: @blue !important;
 	border-bottom:none;
+    padding-bottom: 0px;
+    height:54px;
+    border-bottom: 3px solid @blue;
 
 }
 .triangle {
@@ -8028,7 +8047,7 @@ textarea.form-control.myform2{
 		display: block;
 		float: left;
 		margin: 0 4px 4px 0;
-		}
+    }
 		.programs-list li .cover {
 			width: 400px;
 			height: 223px;
@@ -9543,12 +9562,15 @@ audio, canvas, video {
 					height:39px;
 					&:hover{
 						text-decoration: none !important;
-                        color: #2e9df7 !important;
+                        color: @blue !important;
 						padding-bottom: 0px;
+                        border-bottom: 3px solid @blue;
+                        height: 54px;
 					}
 					&.active{
-						color:#777;
-						border-bottom: 1px solid white;
+						color:@blue !important;
+                        border-bottom: 3px solid @blue;
+                        height: 54px;
 					}
 				}
 			}

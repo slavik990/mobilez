@@ -336,10 +336,10 @@ $(document).ready(function(){
     $(".form .button-submit").click(function(){
 
         var email = $('#contact-form input[name="email"]').val();
-        var massage = $('#contact-form textarea[name="message"]').val();
+        var massage = $('#contact-form textarea[name="message"]').val().trim();
         var regEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
-        if (!regEmail.test(email)|| massage == "") {
+        if (!regEmail.test(email)|| massage == "" || !testMassage.test(massage)) {
             $('div.inTouch').find('ul.formErrors li').hide();
             if(!regEmail.test(email)){
                var emailError = $('div.inTouch').find('ul.formErrors li').eq(0);
@@ -351,7 +351,9 @@ $(document).ready(function(){
                 emailError.show();
             }
             return false;
+
         }
+
         else { $('div.inTouch').find('ul.formErrors li').hide();
             $.post("./mail.php", $("#contact-form").serialize(),  function(data) {  _gaq.push(['_trackEvent', "Client Feedback", "Email", "Email"]);
             $('#success').html('The Message sent!');
@@ -421,8 +423,6 @@ $(document).ready(function(){
             });
         }
     });
-        
-
 
 	var portfolioAnimTime = 200;
 	var arrKoord = [];
