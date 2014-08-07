@@ -28,7 +28,9 @@ $(document).ready(function(){
 			i.lineWidth=30,
 			i.stroke()}
 	}
-	if ($("#canvas_circle_1").length>0)
+
+
+    if ($("#canvas_circle_1").length>0)
 		circle();
 	if (window.location.toString().search("careers")!=-1&&window.location.toString().search("benefits")!=-1){
 		$(".howwework li a.active").removeClass("active");
@@ -1086,6 +1088,7 @@ $(document).ready(function(){
             google.maps.event.addListener(marker, 'mouseout', function() {
                 tooltip.removeTip();
             });
+
 
         });
 
