@@ -3383,72 +3383,217 @@ section.main-page{
 }
 
 #startup{
-    height: 705px;
 	font-size:@f20;
 	line-height: @lh30;
-    margin-bottom: 40px;
 	.container{
-		padding:0 @defPadPage;
-	}
-	h2{
-		padding-top:50px;
-		font-size:@f40;
-		line-height: @lh40;
-		color:#777;
-		font-weight:100;
-		text-align:center;
-	}
-	.text{
-        font-family: "helveticaneuecyrlight", Arial, Helvetica, sans-serif !important;
-		font-size:18px;
-		line-height: @lh40;
-		color:#000;
-		margin-bottom:28px;
-        font-weight: 100;
-	}
-	.left{
-		width:70%;
-		float:left;
-	}
-	.right{
-		width:30%;
-		float:right;
-	}
-	.button{
-		text-align:center;
-		padding-top:20px;
-		display:block;
-		background:none;
-		padding-bottom:50px;
-		.left{
-			width:50%;
-			float:left;
-			input{
-				width:70%;
-				font-size:@f20;
-				height:30px;
-				font-family: "helveticaneuecyrlight", Arial, Helvetica, sans-serif !important;
-			}
-		}
-		.right{
-			width:50%;
-			float:right;
-			a{
-				width:70%;
-				display:block;
-				background-color:#00b050;
-				color:white;
-				text-decoration:none;
-				height:30px;
-				line-height: @lh30;
-				font-family: "helveticaneuecyrlight", Arial, Helvetica, sans-serif !important;
-				font-size:@f20;
-			}
-		}
-
+		padding:55px 0 0 0;
 	}
 
+  .starpUpHeader {
+    height: 355px;
+    background-image: url('../i/startUP/startUPheader.png');
+    background-repeat: no-repeat;
 
+    div {
+      float: right;
+      position: relative;
+      top: 100px;
+      right: 50px;
+    }
+    h3 {
+      padding: 0;
+      margin: 0;
+      font-size: 33px;
+      font-weight: 100;
+      color: #2bb3ec;
+      text-align: left;
+      line-height: 33px;
+    }
+    a {
+      color:#2e9df7;
+      float: left;
+      display: block;
+      margin: 30px 85px 0 85px;
+      padding: 0 6px;
+      background-color: #fff;
+      border-right: 1px solid #e8e8e8;
+      border-bottom: 1px solid #e8e8e8;
+      text-decoration: none;
+    }
+  }
+  .startUpCont {
+    background-color: #fff;
+    width: 95%;
+    margin: 0 auto -40px auto;
+    padding: 25px 40px ;
+    position: relative;
+    top: -20px;
+    z-index: 2;
+    font-size: 18px;
+    p {
+      margin: 0;
+      padding: 0 0 20px 0;
+      text-align: center;
+    }
+
+    .items {
+      width: 33.00%;
+      min-height: 190px;
+      border: 1px solid #e2e2e2;
+      padding: 5px;
+      float: left;
+      font-size: 14px;
+      &:hover {
+        border-top: 3px solid #8d708e;
+
+        .title {
+          height: 77px;
+        }
+        .text {
+          position: relative;
+          top: 1px;
+        }
+      }
+
+      p {
+        padding: 0;
+        margin: 0;
+      }
+      .title {
+        height: 80px;
+        padding-left: 55px;
+        background-image: url("../i/startUP/startIcon1.png");
+        background-repeat: no-repeat;
+        background-position: 2% 50%;
+        display: table-cell;
+        vertical-align: middle;
+
+        h3 {
+          text-align: left;
+          font-size: 18px;
+          color:#777c81;
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+    .item2 {
+      &:hover {
+        border-top: 3px solid #807fff;
+      }
+      .title {
+        background-image: url("../i/startUP/startIcon2.png");
+      }
+    }
+    .item3 {
+      &:hover {
+        border-top: 3px solid #e74c3c;
+      }
+      .title {
+        background-image: url("../i/startUP/startIcon3.png");
+      }
+    }
+    .item4 {
+      &:hover {
+        border-top: 3px solid #16a085;
+      }
+      .title {
+        background-image: url("../i/startUP/startIcon4.png");
+      }
+    }
+    .item5 {
+      &:hover {
+        border-top: 3px solid #f1c40f;
+      }
+      .title {
+        background-image: url("../i/startUP/startIcon5.png");
+      }
+    }
+    .item6 {
+      &:hover {
+        border-top: 3px solid #27ae60;
+      }
+      .title {
+        background-image: url("../i/startUP/startIcon6.png");
+        background-position: 2% 49%;
+      }
+    }
+  }
+  .startUpForm {
+    background-color: #f3f3f3;
+    padding: 60px 0 40px 0;
+    z-index: 1;
+    text-align: center;
+    .formErrors {
+      list-style-type: none;
+
+      color: red;
+      margin: 0px 0px 20px opx;
+      padding: 0px;
+      li{
+        display: none;
+      }
+    }
+    h3 {
+      font-size: 36px;
+      font-weight: 100;
+      color: #199bce;
+      margin: 0;
+      padding: 0;
+    }
+
+    form {
+
+      table {
+        padding: 0;
+        margin: 0 auto;
+        width: 500px ;
+
+        td {
+          text-align: left;
+          vertical-align: bottom;
+          height: 40px;
+          width: 245px;
+
+          input {
+            width: 235px;
+            height: 40px;
+            margin: 0;
+            padding: 0;
+            border-color: 1px solid #eeeeee ;
+            outline: none;
+          }
+
+          &.right {
+            padding-left: 12px ;
+            input {
+              float: right;
+            }
+          }
+
+          textarea {
+            width: 100%;
+            height: 100px;
+            resize: none;
+          }
+
+          a.buttom {
+            background-color:#27ae60 ;
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 15px;
+            display: block;
+            float: right;
+
+            &:hover {
+              text-decoration: none;
+              border: none;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 
@@ -8199,10 +8344,17 @@ textarea.form-control.myform2{
       padding-bottom: 0;
 }
 .manager-container .manager-photo img {
+
 	-webkit-border-radius: 130px;
 	-moz-border-radius: 130px;
 	border-radius: 130px;
 	margin-top:35px;
+
+    &.width {
+      margin-left: 50px;
+      width: 200px;
+    }
+
 }
 .manager-container .manager-text p {
 	font-size: @f20;
@@ -8825,6 +8977,20 @@ textarea.form-control.myform2{
     -o-animation:meter 2s 1s ease forwards;
     -ms-animation:meter 2s 1s ease forwards;
 }
+.meter_wrap .meter_number3 ul{
+  padding: 0;
+  margin: 0;
+  transform: translate(0,-83px);
+  -moz-transform: translate(0,-83px);
+  -webkit-transform: translate(0,-83px);
+  -o-transform: translate(0,-83px);
+
+  animation:meter 2s 1s ease forwards;
+  -moz-animation:meter 2s 1s ease forwards;
+  -webkit-animation:meter3 2s 1s ease forwards;
+  -o-animation:meter 2s 1s ease forwards;
+  -ms-animation:meter 2s 1s ease forwards;
+}
 
 
 @-moz-keyframes meter {
@@ -8856,6 +9022,16 @@ textarea.form-control.myform2{
 		transform: translate(0,-747px);
 		-webkit-transform: translate(0,-747px);
 	}
+}
+@-webkit-keyframes meter3 {
+  0% {
+    transform: translate(0,-83px);
+    -webkit-transform: translate(0,-83px);
+  }
+  100%   {
+    transform: translate(0,-913px);
+    -webkit-transform: translate(0,-913px);
+  }
 }
 @-o-keyframes meter {
 	0% {

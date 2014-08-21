@@ -166,6 +166,11 @@ $(document).ready(function(){
         }, 'slow');
         $('.select option').eq($(this).data("kurs")).attr("selected","selected");
     });
+    $(".starpUpHeader a").click(function(e){
+        $('html, body').animate({
+            scrollTop: $('.startUpForm').offset().top
+        }, 'slow');
+    });
     $(".resumAdd").click(function(e){
         $('.addresum').click();
     });
@@ -353,7 +358,6 @@ $(document).ready(function(){
                 emailError.show();
             }
             return false;
-
         }
 
         else { $('div.inTouch').find('ul.formErrors li').hide();
@@ -361,6 +365,35 @@ $(document).ready(function(){
             $('#success').html('The Message sent!');
             $('#success').hide(2000);   });
           
+            return false;
+        }
+    });
+
+    $(".startUpForm .buttom").click(function(){
+        alert('Привет!');
+        var email = $('.formUP input[name="email"]').val();
+        var massage = $('.formUP textarea[name="message"]').val().trim();
+        var regEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+        if (!regEmail.test(email)|| massage == "" || !testMassage.test(massage)) {
+            $('div.startUpForm').find('ul.formErrors li').hide();
+            if(!regEmail.test(email)){
+                var emailError = $('div.inTouch').find('ul.formErrors li').eq(0);
+                emailError.show();
+                email.focus();
+            }
+            if (massage == ""){
+                var emailError = $('div.inTouch').find('ul.formErrors li').eq(1);
+                emailError.show();
+            }
+            return false;
+        }
+
+        else { $('div.startUpForm').find('ul.formErrors li').hide();
+            $.post("./mail.php", $("#contact-form").serialize(),  function(data) {  _gaq.push(['_trackEvent', "Client Feedback", "Email", "Email"]);
+                $('#success').html('The Message sent!');
+                $('#success').hide(2000);   });
+
             return false;
         }
     });
