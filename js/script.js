@@ -105,13 +105,13 @@ $(document).ready(function(){
 		$(".mobi-tab-content-container .tab-pane").eq(n).removeClass("fade");
 		
 	});
-	$(".howwework li a").click(function(){
+	/*$(".howwework li a").click(function(){
 		$(".howwework li a.active").removeClass("active");
 		var n = $(".howwework li a").index($(this));
 		$("#how-we-wo .howw").hide();
 		$("#how-we-wo .howw").eq(n).show();
 		$(this).addClass("active");
-	});
+	});*/
     $(".enterprise li a").click(function(){
         $(".enterprise li a.active").removeClass("active");
         var n = $(".enterprise li a").index($(this));
@@ -346,7 +346,7 @@ $(document).ready(function(){
         var massage = $('#contact-form textarea[name="message"]').val().trim();
         var regEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
-        if (!regEmail.test(email)|| massage == "" || !testMassage.test(massage)) {
+        if (!regEmail.test(email)|| massage == "") {
             $('div.inTouch').find('ul.formErrors li').hide();
             if(!regEmail.test(email)){
                var emailError = $('div.inTouch').find('ul.formErrors li').eq(0);
@@ -362,40 +362,61 @@ $(document).ready(function(){
 
         else { $('div.inTouch').find('ul.formErrors li').hide();
             $.post("./mail.php", $("#contact-form").serialize(),  function(data) {  _gaq.push(['_trackEvent', "Client Feedback", "Email", "Email"]);
-            $('#success').html('The Message sent!');
-            $('#success').hide(2000);   });
-          
+
+            });
+            $('#success').css('opacity','1');
+            $('#success').animate({opacity: "0"},2000);
             return false;
         }
     });
 
     $(".startUpForm .buttom").click(function(){
-        alert('Привет!');
-        var email = $('.formUP input[name="email"]').val();
-        var massage = $('.formUP textarea[name="message"]').val().trim();
-        var regEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+       var form = $(this).parents(".startUpForm");
+       var name = form.find('input[name="name"]').val().trim();
+       var phone = form.find('input[name="phone"]').val().trim();
+       var company = form.find('input[name="company"]').val().trim();
+       var email = form.find('input[name="email"]').val().trim();
+       var message = form.find('textarea').val().trim();
+       var regEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+       var errors = form.find(".formErrors li");
 
-        if (!regEmail.test(email)|| massage == "" || !testMassage.test(massage)) {
-            $('div.startUpForm').find('ul.formErrors li').hide();
-            if(!regEmail.test(email)){
-                var emailError = $('div.inTouch').find('ul.formErrors li').eq(0);
-                emailError.show();
-                email.focus();
-            }
-            if (massage == ""){
-                var emailError = $('div.inTouch').find('ul.formErrors li').eq(1);
-                emailError.show();
-            }
-            return false;
-        }
-
-        else { $('div.startUpForm').find('ul.formErrors li').hide();
-            $.post("./mail.php", $("#contact-form").serialize(),  function(data) {  _gaq.push(['_trackEvent', "Client Feedback", "Email", "Email"]);
-                $('#success').html('The Message sent!');
-                $('#success').hide(2000);   });
-
-            return false;
-        }
+       if (name == "" && phone == "" && email == "" && company == "") {
+            errors.eq(0).css("display","block");
+            errors.eq(0).css("opacity","1")
+            errors.eq(0).animate({opacity:"0"},2000,function() {
+                errors.eq(0).css("display","none");
+            });
+       }
+       else {
+           if (name == "") {
+               errors.eq(1).css("display","block");
+               errors.eq(1).css("opacity","1")
+               errors.eq(1).animate({opacity:"0"},2000,function() {
+                   errors.eq(1).css("display","none");
+               });
+           }
+           if (phone == "") {
+               errors.eq(2).css("display","block");
+               errors.eq(2).css("opacity","1")
+               errors.eq(2).animate({opacity:"0"},2000,function() {
+                   errors.eq(2).css("display","none");
+               });
+           }
+           if (company == "") {
+               errors.eq(3).css("display","block");
+               errors.eq(3).css("opacity","1")
+               errors.eq(3).animate({opacity:"0"},2000,function() {
+                   errors.eq(3).css("display","none");
+               });
+           }
+           if (email == "") {
+               errors.eq(4).css("display","block");
+               errors.eq(4).css("opacity","1")
+               errors.eq(4).animate({opacity:"0"},2000,function() {
+                   errors.eq(4).css("display","none");
+               });
+           }
+       }
     });
 
 

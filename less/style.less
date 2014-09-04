@@ -547,6 +547,7 @@ body {
 .title-section {
     text-align: center;
 	padding: 1px;
+    margin: 20px 0;
     .title {
         font-weight: 100;
         color: @defaultBlue;
@@ -1817,6 +1818,10 @@ html[xmlns] .clearfix {
     text-align: center;
     color:green;
     font-size: 25px;
+    display: block;
+    opacity: 0;
+    float: right;
+    padding-top: 8px;
 }
 .apply-block{
     line-height: 20px;
@@ -3438,11 +3443,11 @@ section.main-page{
 
     .items {
       width: 33.00%;
-      min-height: 190px;
+      min-height: 205px;
       border: 1px solid #e2e2e2;
-      padding: 5px;
+      padding: 10px;
       float: left;
-      font-size: 14px;
+      font-size: 17px;
       &:hover {
         border-top: 3px solid #8d708e;
 
@@ -3519,6 +3524,9 @@ section.main-page{
       }
     }
   }
+  .divErrors {
+    margin: 0 auto;
+  }
   .startUpForm {
     background-color: #f3f3f3;
     padding: 60px 0 40px 0;
@@ -3526,12 +3534,14 @@ section.main-page{
     text-align: center;
     .formErrors {
       list-style-type: none;
-
       color: red;
-      margin: 0px 0px 20px opx;
+      margin: 0px ;
       padding: 0px;
       li{
         display: none;
+        position: relative;
+        z-index: 10;
+        opacity: 1;
       }
     }
     h3 {
@@ -3559,7 +3569,7 @@ section.main-page{
             width: 235px;
             height: 40px;
             margin: 0;
-            padding: 0;
+            padding: 0 10px;
             border-color: 1px solid #eeeeee ;
             outline: none;
           }
@@ -3711,7 +3721,7 @@ section.main-page{
       }
     }
     .secpage {
-      display: none;
+      display: block;
       padding: 0 10%;
     }
 
